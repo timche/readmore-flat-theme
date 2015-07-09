@@ -13,13 +13,12 @@
     },
 
     "permissions": [
-        "http://readmore.de/",
-        "http://www.readmore.de/"
+        "http://www.readmore.de"
     ],
 
     "content_scripts": [
             {
-            "matches": ["http://readmore.de/*", "http://www.readmore.de/*"],
+            "matches": ["http://www.readmore.de/start"],
             "css": ["assets/css/readmore-flat-theme.min.css"],
             "js": ["assets/js/readmore-flat-theme.min.js"],
             "run_at": "document_end"
