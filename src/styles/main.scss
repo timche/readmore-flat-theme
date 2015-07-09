@@ -1,5 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/assets/fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('/assets/fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+}
 
 /* General */
 
@@ -124,6 +132,7 @@ a {
 .content_head h2.content_title {
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
 }
 
 #c_content .content.teaser {

@@ -4,7 +4,9 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     bourbon = require('node-bourbon').includePaths,
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    replace = require('gulp-replace');
 
 gulp.task('css', function () {
     return gulp.src('src/styles/main.scss')
@@ -12,7 +14,7 @@ gulp.task('css', function () {
         includePaths: bourbon
     }))
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(replace(';', ' !important;'))
     .pipe(minifyCSS())
     .pipe(rename({
         basename: 'readmore-flat',
@@ -27,6 +29,11 @@ gulp.task('js', function() {
         'src/scripts/*.js'
     ])
     .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(rename({
+        basename: 'readmore-flat',
+        suffix: '.min'
+    }))
     .pipe(gulp.dest('dist/assets/js'))
 });
 
