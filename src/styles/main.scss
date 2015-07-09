@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url('/assets/fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+  src: url('../fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-weight: 700;
-  src: url('/assets/fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+  src: url('../fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
 }
 
 /* General */
@@ -103,8 +103,6 @@ a {
 }
 
 #c_content ul.breadcrumbs li+li:before {
-    font-family: "FontAwesome";
-    content: "\f105";
     padding: 0 8px;
 }
 
@@ -233,6 +231,12 @@ a {
 }
 
 /* Advertisement */
+
+ #pricehits-up,
+ #pricehits,
+ #pricehits-down {
+     display: none;
+ }
 
 #monkey_lb {
     display: none;
