@@ -1,0 +1,234 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+/* General */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #515A63;
+    background: #F7F7F7;
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
+}
+
+a {
+    transition: all .2s;
+}
+
+/* Container */
+
+#monkey {
+    width: 1204px;
+}
+
+#container {
+    background: #F7F7F7;
+    width: 1204px;
+}
+
+#container>div {
+	border: none;
+}
+
+/* Left Sidebar */
+
+#c_left {
+    background: #F7F7F7;
+    border: none;
+    width: 200px;
+    padding: 0 15px;
+    margin-top: -26px;
+}
+
+#c_left .control {
+    margin-top: 26px;
+}
+
+#c_left h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    margin-top: 26px;
+}
+
+#c_left .pcgames {
+    display: none;
+}
+
+#c_left hr {
+    display: none;
+}
+
+#c_left ul li {
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+#c_left ul li a {
+    color: #515A63;
+}
+
+#c_left ul li span.viewer {
+    font-style: normal;
+}
+
+/* Content */
+
+#c_content {
+    font-size: 14px;
+    background: #F7F7F7;
+    width: 700px;
+}
+
+#c_content ul.breadcrumbs {
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 12px;
+	padding-bottom: 7px;
+    margin-top: -14px;
+    color: #999;
+}
+
+#c_content ul.breadcrumbs li+li:before {
+    font-family: "FontAwesome";
+    content: "\f105";
+    padding: 0 8px;
+}
+
+#c_content hr {
+    display: none;
+}
+
+.content_head {
+    margin: 2px;
+}
+
+.content_head .subtitle {
+    font-size: 12px;
+    text-transform: none;
+    color: #999;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.content_head .time,
+.content_head .category {
+    color: #999;
+}
+
+.content_head h2.content_title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#c_content .content.teaser {
+  line-height: 1.5;
+}
+
+.content_footer {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Right Sidebar */
+
+#c_right {
+    background: #F7F7F7;
+    border: none;
+    width: 300px;
+    padding: 0 15px;
+    margin-top: -26px;
+}
+
+#c_right .control {
+    margin-top: 26px;
+}
+
+#c_right .control_betting {
+    margin-top: 22px;
+}
+
+#c_right h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    margin-top: 26px;
+}
+
+
+#c_right hr {
+    display: none;
+}
+
+#c_right .headlines_cat {
+    background: none;
+    border: none;
+}
+
+#c_right .headlines_cat span {
+    padding: 0;
+}
+
+#c_right .headlines_cat a {
+    color: #2b91ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#c_right span.headline_ind {
+    display: none;
+}
+
+#c_right ul li {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#c_right ul li a {
+    color: #515A63;
+}
+
+#c_right ul li a.block {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#c_right span.adv_title {
+    display: none;
+}
+
+#c_right span.forum {
+    color: #515A63;
+    font-weight: 700;
+}
+
+#c_right div.monkey_mr {
+    display: none;
+}
+
+/* Advertisement */
+
+#monkey_lb {
+    display: none;
+}
+
+#monkey_right {
+    display: none;
+}
