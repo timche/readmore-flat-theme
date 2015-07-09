@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     replace = require('gulp-replace');
 
 gulp.task('css', function () {
-    return gulp.src('src/styles/main.scss')
+    return gulp.src('src/scss/main.scss')
     .pipe(sass({
         includePaths: bourbon
     }))
@@ -17,7 +17,7 @@ gulp.task('css', function () {
     .pipe(replace(';', ' !important;'))
     .pipe(minifyCSS())
     .pipe(rename({
-        basename: 'readmore-flat',
+        basename: 'readmore-flat-theme',
         suffix: '.min'
     }))
     .pipe(gulp.dest('dist/assets/css'))
@@ -31,13 +31,13 @@ gulp.task('js', function() {
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(rename({
-        basename: 'readmore-flat',
+        basename: 'readmore-flat-theme',
         suffix: '.min'
     }))
     .pipe(gulp.dest('dist/assets/js'))
 });
 
 gulp.task('default', ['css', 'js'], function () {
-    gulp.watch("src/styles/**/*.scss", ['css']);
-    gulp.watch("src/scripts/**/*.js", ['js']);
+    gulp.watch("src/scss/**/*.scss", ['css']);
+    gulp.watch("src/js/**/*.js", ['js']);
 });

@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "readmore.de Flat",
-    "description": "Ändert das Aussehen von readmore.de",
+    "name": "Readmore Flat Theme",
+    "description": "Ein Flat Theme als Chrome Extension für readmore.de",
     "version": "0.1",
     "author": "timche",
 
