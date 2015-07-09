@@ -1,4 +1,4 @@
-@import 'bourbon';
+@import 'bourbon/bourbon';
 
 @import 'base/variables';
 @import 'base/typography';
@@ -7,7 +7,6 @@
 @import 'modules/forms';
 
 @import 'layout/general';
-@import 'layout/header';
 @import 'layout/sidebar-left';
 @import 'layout/content';
 @import 'layout/sidebar-right';

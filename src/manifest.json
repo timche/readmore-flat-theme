@@ -20,8 +20,8 @@
     "content_scripts": [
             {
             "matches": ["http://readmore.de/*", "http://www.readmore.de/*"],
-            "css": ["assets/css/readmore-flat.min.css"],
-            "js": ["assets/js/readmore-flat.min.js"],
+            "css": ["assets/css/readmore-flat-theme.min.css"],
+            "js": ["assets/js/readmore-flat-theme.min.js"],
             "run_at": "document_end"
         }
     ]

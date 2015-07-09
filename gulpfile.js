@@ -8,6 +8,11 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     replace = require('gulp-replace');
 
+gulp.task('manifest', function() {
+    return gulp.src('src/manifest.json')
+    .pipe(gulp.dest('dist'))
+});
+
 gulp.task('css', function () {
     return gulp.src('src/scss/main.scss')
     .pipe(sass({
@@ -15,9 +20,12 @@ gulp.task('css', function () {
     }))
     .pipe(autoprefixer('last 2 version'))
     .pipe(replace(';', ' !important;'))
+    .pipe(rename({
+        basename: 'readmore-flat-theme'
+    }))
+    .pipe(gulp.dest('dist/assets/css'))
     .pipe(minifyCSS())
     .pipe(rename({
-        basename: 'readmore-flat-theme',
         suffix: '.min'
     }))
     .pipe(gulp.dest('dist/assets/css'))
@@ -25,19 +33,20 @@ gulp.task('css', function () {
 
 gulp.task('js', function() {
     return gulp.src([
-        'src/scripts/vendor/*js',
-        'src/scripts/*.js'
+        'src/js/vendor/*js',
+        'src/js/*.js'
     ])
-    .pipe(concat('main.js'))
+    .pipe(concat('readmore-flat-theme.js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(rename({
-        basename: 'readmore-flat-theme',
         suffix: '.min'
     }))
     .pipe(gulp.dest('dist/assets/js'))
 });
 
-gulp.task('default', ['css', 'js'], function () {
+gulp.task('default', ['manifest', 'css', 'js'], function () {
+    gulp.watch("src/manifest.json", ['manifest']);
     gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/**/*.js", ['js']);
 });

@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Open Sans" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  src: url("Open_Sans/OpenSans-Regular.ttf") format("truetype") !important; }
+
+@font-face {
+  font-family: "Roboto" !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype") !important; }
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+  color: #515A63 !important;
+  /* -webkit-font-smoothing: antialiased !important; */
+  /* -moz-osx-font-smoothing: grayscale !important; */ }
+
+a {
+  -webkit-transition: all 0.2s !important;
+          transition: all 0.2s !important; }
+
+.button,
+.content_footer a,
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  background: #e9eaed !important;
+  color: #515A63 !important;
+  -webkit-transition: all 0.2s !important;
+          transition: all 0.2s !important;
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+  font-family: "Open Sans", sans-serif !important;
+  cursor: pointer !important; }
+  .button:hover,
+  .content_footer a:hover,
+  .button:focus,
+  .content_footer a:focus,
+  button:hover,
+  button:focus, input[type="button"]:hover,
+  input[type="button"]:focus, input[type="reset"]:hover,
+  input[type="reset"]:focus, input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background: #2887ee !important;
+    color: #fff !important; }
+  .button.is-blue,
+  .content_footer a.is-blue,
+  .content_footer a:nth-child(2), button.is-blue, input[type="button"].is-blue, input[type="reset"].is-blue, input[type="submit"].is-blue {
+    background: #2887ee !important;
+    color: #fff !important; }
+    .button.is-blue:hover,
+    .content_footer a.is-blue:hover,
+    .content_footer a:hover:nth-child(2), .button.is-blue:focus,
+    .content_footer a.is-blue:focus,
+    .content_footer a:focus:nth-child(2), button.is-blue:hover,
+    button.is-blue:focus, input[type="button"].is-blue:hover,
+    input[type="button"].is-blue:focus, input[type="reset"].is-blue:hover,
+    input[type="reset"].is-blue:focus, input[type="submit"].is-blue:hover,
+    input[type="submit"].is-blue:focus {
+      background: #FFB400 !important; }
+
+body {
+  background: #F7F7F7 !important;
+  padding-top: 80px !important; }
+
+#monkey {
+  width: 1204px !important; }
+
+#container {
+  background: #F7F7F7 !important;
+  width: 1204px !important; }
+
+#container > div {
+  border: none !important; }
+
+#header {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 100 !important; }
+
+#c_left {
+  background: #F7F7F7 !important;
+  border: none !important;
+  width: 200px !important;
+  padding: 0 15px !important;
+  margin-top: -26px !important; }
+
+#c_left .control {
+  margin-top: 26px !important; }
+
+#c_left h3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 6px !important;
+  margin-top: 26px !important; }
+
+#c_left .pcgames {
+  display: none !important; }
+
+#c_left hr {
+  display: none !important; }
+
+#c_left ul li {
+  font-size: 12px !important;
+  padding: 5px 0 !important; }
+
+#c_left ul li a {
+  color: #515A63 !important; }
+  #c_left ul li a:hover,
+  #c_left ul li a:focus {
+    color: #2887ee !important; }
+
+#c_left ul li span.game_icon {
+  width: 17px !important; }
+
+#c_left ul li span.game_icon img {
+  width: 14px !important;
+  height: 14px !important;
+  margin-bottom: -2px !important; }
+
+#c_left ul li span.viewer {
+  font-style: normal !important; }
+
+#c_left .gallery_image {
+  text-align: left !important;
+  margin-top: 10px !important; }
+
+.gallery_image img {
+  width: 100% !important;
+  height: auto !important; }
+
+#c_left a.small {
+  font-size: 12px !important;
+  color: #515A63 !important; }
+
+#pricehits-up,
+#pricehits,
+#pricehits-down {
+  display: none !important; }
+
+#c_content {
+  font-size: 14px !important;
+  background: #F7F7F7 !important;
+  width: 700px !important; }
+
+#c_content ul.breadcrumbs {
+  font-size: 14px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 7px !important;
+  margin-top: -14px !important;
+  color: #999 !important; }
+
+#c_content ul.breadcrumbs li + li:before {
+  padding: 0 8px !important; }
+
+#c_content hr {
+  display: none !important; }
+
+.content_head {
+  margin: 2px !important; }
+
+.content_head .subtitle {
+  font-size: 12px !important;
+  text-transform: none !important;
+  color: #999 !important;
+  padding: 0 !important;
+  margin-bottom: 2px !important; }
+
+.content_head .time,
+.content_head .category {
+  color: #999 !important;
+  font-size: 12px !important; }
+
+.content_head h2.content_title {
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  font-family: "Roboto", sans-serif !important; }
+
+#c_content .content.teaser {
+  line-height: 1.5 !important;
+  margin-bottom: 15px !important; }
+
+.content_links_media ul {
+  font-size: 12px !important; }
+
+.content_links_media ul img {
+  margin-bottom: -3px !important; }
+
+.content_footer {
+  padding-bottom: 20px !important;
+  margin-bottom: 20px !important;
+  border-bottom: 1px solid #e0e0e0 !important; }
+  .content_footer a {
+    margin-left: 2px !important; }
+
+a.load_more {
+  color: #999 !important; }
+
+#c_right {
+  background: #F7F7F7 !important;
+  border: none !important;
+  width: 300px !important;
+  padding: 0 15px !important;
+  margin-top: -26px !important; }
+
+#c_right .control {
+  margin-top: 26px !important; }
+
+#c_right .control_betting {
+  margin-top: 22px !important; }
+
+#c_right .matches_filter {
+  display: none !important; }
+
+#c_right .matches_filter {
+  display: none !important; }
+
+#c_right a.matches_event_title {
+  font-size: 14px !important;
+  color: #2887ee !important; }
+
+#c_right ul.matches.live {
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important; }
+
+#c_right ul li span.game_icon_large {
+  width: 17px !important;
+  margin-top: 1px !important; }
+
+#c_right ul.matches li span {
+  padding: 0 !important; }
+
+#c_right ul.matches li span.vs {
+  color: #515A63 !important; }
+
+font.live {
+  text-transform: lowercase !important;
+  display: inline-block !important; }
+  font.live:first-letter {
+    text-transform: none !important; }
+
+font.score_win {
+  color: #00c240 !important; }
+
+font.score_loss {
+  color: #d41313 !important; }
+
+#c_right .matches_time_quick li {
+  width: 62px !important; }
+
+#c_right ul li span.betting_rank {
+  width: 11px !important; }
+
+#c_right h3 {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 10px !important;
+  margin-top: 26px !important; }
+
+#c_right hr {
+  display: none !important; }
+
+#c_right ul {
+  margin-bottom: 20px !important; }
+
+#c_right .headlines_cat {
+  font-size: 12px !important;
+  color: #999 !important;
+  background: none !important;
+  border: none !important;
+  height: auto !important; }
+
+#c_right .headlines_cat span {
+  padding: 0 !important;
+  height: auto !important; }
+
+#c_right .headlines_cat a {
+  color: #2b91ff !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  font-family: "Roboto", sans-serif !important; }
+
+#c_right span.headline_ind {
+  display: none !important; }
+
+#c_right ul li {
+  font-size: 12px !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  color: #515A63 !important; }
+
+#c_right ul li a {
+  color: #515A63 !important; }
+  #c_right ul li a:hover,
+  #c_right ul li a:focus {
+    color: #2887ee !important; }
+
+#c_right ul li a.block {
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important; }
+
+#c_right span.adv_title {
+  display: none !important; }
+
+#c_right span.forum {
+  color: #515A63 !important;
+  font-weight: 700 !important; }
+  #c_right span.forum:hover,
+  #c_right span.forum:focus {
+    color: #2887ee !important; }
+
+#c_right div.monkey_mr {
+  display: none !important; }
+
+#c_right .headlines_cat span.icon {
+  margin-top: 4px !important;
+  margin-left: 5px !important; }
+
+#c_right .control_betting span {
+  border-radius: 50% !important;
+  border: none !important;
+  height: 18px !important;
+  width: 18px !important;
+  padding: 0 !important;
+  padding-top: 5px !important;
+  top: -7px !important;
+  left: 23px !important;
+  text-align: center !important; }
+
+#monkey_lb {
+  display: none !important; }
+
+#monkey_right {
+  display: none !important; }

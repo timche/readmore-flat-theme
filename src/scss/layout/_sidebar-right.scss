@@ -1,0 +1,174 @@
+#c_right {
+    background: #F7F7F7;
+    border: none;
+    width: 300px;
+    padding: 0 15px;
+    margin-top: -26px;
+}
+
+#c_right .control {
+    margin-top: 26px;
+}
+
+#c_right .control_betting {
+    margin-top: 22px;
+}
+
+#c_right .matches_filter {
+    display: none;
+}
+
+#c_right .matches_filter {
+    display: none;
+}
+
+#c_right a.matches_event_title {
+    font-size: 14px;
+    color: $blue;
+}
+
+#c_right ul.matches.live {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+#c_right ul li span.game_icon_large {
+    width: 17px;
+    margin-top: 1px;
+}
+
+#c_right ul.matches li span {
+    padding: 0;
+}
+
+#c_right ul.matches li span.vs {
+    color: $base-font-color;
+}
+
+font.live {
+    text-transform: lowercase;
+    display: inline-block;
+    &:first-letter {
+        text-transform: none;
+    }
+}
+
+font.score_win {
+    color: $green;
+}
+
+font.score_loss {
+    color: $red;
+}
+
+#c_right .matches_time_quick li {
+    width: 62px;
+}
+
+#c_right ul li span.betting_rank {
+    width: 11px;
+}
+
+#c_right h3 {
+    font-family: $roboto;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    margin-top: 26px;
+}
+
+
+#c_right hr {
+    display: none;
+}
+
+#c_right ul {
+    margin-bottom: 20px;
+}
+
+#c_right .headlines_cat {
+    font-size: 12px;
+    color: #999;
+    background: none;
+    border: none;
+    height: auto;
+}
+
+#c_right .headlines_cat span {
+    padding: 0;
+    height: auto;
+}
+
+#c_right .headlines_cat a {
+    color: #2b91ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: $roboto
+}
+
+#c_right span.headline_ind {
+    display: none;
+}
+
+#c_right ul li {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: $base-font-color;
+}
+
+#c_right ul li a {
+    color: #515A63;
+    &:hover,
+    &:focus {
+        color: $blue;
+    }
+}
+
+#c_right ul li a.block {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#c_right span.adv_title {
+    display: none;
+}
+
+#c_right span.forum {
+    color: #515A63;
+    font-weight: 700;
+    &:hover,
+    &:focus {
+        color: $blue;
+    }
+}
+
+#c_right div.monkey_mr {
+    display: none;
+}
+
+#c_right .headlines_cat span.icon {
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+#c_right .control_betting span {
+    border-radius: 50%;
+    border: none;
+    height: 18px;
+    width: 18px;
+    padding: 0;
+    padding-top: 5px;
+    top: -7px;
+    left: 23px;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+.button,
+#{$all-buttons} {
+    background: $lightgrey;
+    color: #515A63;
+    transition: all .2s;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: $opensans;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        background: $blue;
+        color: #fff;
+    }
+    &.is-blue {
+        background: $blue;
+        color: #fff;
+        &:hover,
+        &:focus {
+            background: $orange;
+        }
+    }
+}
