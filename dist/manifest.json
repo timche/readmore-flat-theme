@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+
+    "name": "readmore.de Flat",
+    "description": "Ändert das Aussehen von readmore.de",
+    "version": "1.0",
+    "author": "timche",
+
+    "icons": {
+      "16": "assets/img/icons/icon16.png",
+      "48": "assets/img/icons/icon48.png",
+      "128": "assets/img/icons/icon128.png"
+    },
+
+    "permissions": [
+        "http://readmore.de/",
+        "http://www.readmore.de/"
+    ],
+
+    "content_scripts": [
+            {
+            "matches": ["http://readmore.de/*", "http://www.readmore.de/*"],
+            "css": ["assets/css/readmore-flat.min.css"],
+            "js": ["assets/js/readmore-flat.min.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
