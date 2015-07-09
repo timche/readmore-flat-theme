@@ -7,9 +7,9 @@
     "author": "timche",
 
     "icons": {
-      "16": "dist/img/icons/icon16.png",
-      "48": "dist/img/icons/icon48.png",
-      "128": "dist/img/icons/icon128.png"
+      "16": "assets/img/icons/icon16.png",
+      "48": "assets/img/icons/icon48.png",
+      "128": "assets/img/icons/icon128.png"
     },
 
     "permissions": [
@@ -20,8 +20,8 @@
     "content_scripts": [
             {
             "matches": ["http://readmore.de/*", "http://www.readmore.de/*"],
-            "css": ["dist/css/readmore-flat.min.css"],
-            "js": ["dist/js/readmore-flat.min.js"],
+            "css": ["assets/css/readmore-flat.min.css"],
+            "js": ["assets/js/readmore-flat.min.js"],
             "run_at": "document_end"
         }
     ]
