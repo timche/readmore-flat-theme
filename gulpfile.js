@@ -23,7 +23,6 @@ gulp.task('css', function () {
     .pipe(rename({
         basename: 'readmore-flat-theme'
     }))
-    .pipe(gulp.dest('dist/assets/css'))
     .pipe(minifyCSS())
     .pipe(rename({
         suffix: '.min'
@@ -37,7 +36,6 @@ gulp.task('js', function() {
         'src/js/*.js'
     ])
     .pipe(concat('readmore-flat-theme.js'))
-    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(rename({
         suffix: '.min'
