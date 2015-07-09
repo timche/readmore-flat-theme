@@ -1,0 +1,13 @@
+{
+  "name": "readmore-flat",
+  "version": "0.1.0",
+  "description": "Ändert das Aussehen von readmore.de",
+  "author": "timche",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timche/readmore-flat.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
