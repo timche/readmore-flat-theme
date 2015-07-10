@@ -1,15 +1,20 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifyCSS = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    bourbon = require('node-bourbon').includePaths,
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    replace = require('gulp-replace');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var minifyCSS = require('gulp-minify-css');
+var rename = require('gulp-rename');
+var bourbon = require('node-bourbon').includePaths;
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var replace = require('gulp-replace');
+var package = require('./package.json');
 
 gulp.task('manifest', function() {
     return gulp.src('src/manifest.json')
+    .pipe(replace('{{package.title}}', package.title))
+    .pipe(replace('{{package.description}}', package.description))
+    .pipe(replace('{{package.version}}', package.version))
+    .pipe(replace('{{package.author}}', package.author))
     .pipe(gulp.dest('dist'))
 });
 

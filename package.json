@@ -1,6 +1,9 @@
 {
   "name": "readmore-flat-theme",
-  "version": "0.1.0",
+  "title": "Readmore Flat Theme",
+  "description": "Ein Flat Theme als Chrome Extension für readmore.de",
+  "version": "0.0.3",
+  "author": "timche",
   "repository": {
     "type": "git",
     "url": "https://github.com/timche/readmore-flat-theme.git"

@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
 
-    "name": "Readmore Flat Theme",
-    "description": "Ein Flat Theme als Chrome Extension für readmore.de",
-    "version": "0.1",
-    "author": "timche",
+    "name": "{{package.title}}",
+    "description": "{{package.description}}",
+    "version": "{{package.version}}",
+    "author": "{{package.author}}",
 
     "icons": {
       "16": "assets/img/icons/icon16.png",
