@@ -1,4 +1,6 @@
 # Readmore Flat Theme
+[![devDependencies](https://david-dm.org/timche/readmore-flat-theme/dev-status.svg)](https://david-dm.org/timche/readmore-flat-theme#info=devDependencies)
+
 ![Readmore Flat Theme](http://i.imgur.com/bFptVBd.jpg)
 
 Ein Flat Theme als Chrome Extension für [readmore.de](http://www.readmore.de)
