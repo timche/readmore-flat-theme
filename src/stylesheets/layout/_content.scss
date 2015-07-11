@@ -2,6 +2,11 @@
     font-size: 14px;
     background: #F7F7F7;
     width: 700px;
+    >a {
+        &:last-of-type {
+            @extend .button;
+        }
+    }
 }
 
 #c_content ul.breadcrumbs {
@@ -42,7 +47,8 @@
 .content_head h2.content_title {
   font-weight: bold;
   letter-spacing: 1px;
-  font-family: $roboto
+  font-family: $roboto;
+  margin-top: 4px;
 }
 
 #c_content .content.teaser {
@@ -72,5 +78,9 @@
 }
 
 a.load_more {
-    color: #999;
+    @extend .button;
+    display: inline-block;
+    &:first-letter {
+        text-transform: uppercase;
+    }
 }

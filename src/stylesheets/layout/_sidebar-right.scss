@@ -118,8 +118,17 @@ font.score_loss {
     color: $red;
 }
 
-#c_right .matches_time_quick li {
-    width: 62px;
+#c_right .matches_time_quick {
+    text-align: left;
+    li {
+        @extend .button;
+        width: auto;
+        margin-right: 4px;
+        &.active {
+            @extend .is-blue;
+            font-weight: normal;
+        }
+    }
 }
 
 #c_right ul li span.betting_rank {
@@ -183,6 +192,7 @@ font.score_loss {
     overflow: hidden;
     white-space: nowrap;
     color: $base-font-color;
+    border: none;
 }
 
 #c_right ul li a {
@@ -219,4 +229,37 @@ font.score_loss {
 #c_right .headlines_cat span.icon {
     margin-top: 4px;
     margin-left: 5px;
+}
+
+.headlines_cat {
+    &:hover,
+    &:focus {
+        .icon {
+            opacity: 1;
+        }
+    }
+    .icon {
+        transition: $base-transition;
+        opacity: 0;
+    }
+}
+
+h3 {
+    &:hover,
+    &:focus {
+        .amt_icon {
+            opacity: 1;
+        }
+    }
+    .amt_icon {
+        transition: $base-transition;
+        opacity: 0;
+    }
+}
+
+#forums_list {
+    .r {
+        margin-top: 4px;
+        margin-right: 0;
+    }
 }
