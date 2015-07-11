@@ -76,8 +76,8 @@ gulp.task('clean', function (cb) {
 
 gulp.task('zip', function () {
     return gulp.src(dist.path + '**/**/*')
-        .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
-        .pipe(gulp.dest(dist.path));
+    .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
+    .pipe(gulp.dest(dist.path));
 });
 
 gulp.task('default', ['stylesheets', 'javascripts', 'images', 'fonts', 'manifest'], function () {

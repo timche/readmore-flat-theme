@@ -5,7 +5,13 @@
     >a {
         &:last-of-type {
             @extend .button;
+            &[name="post_comment"] {
+                display: none;
+            }
         }
+    }
+    >br {
+        display: none;
     }
 }
 
@@ -50,6 +56,7 @@
   letter-spacing: 1px;
   font-family: $roboto;
   margin-top: 4px;
+  font-size: 16px;
 }
 
 #c_content .content.teaser {
@@ -83,5 +90,193 @@ a.load_more {
     display: inline-block;
     &:first-letter {
         text-transform: uppercase;
+    }
+}
+
+.content {
+    &.details {
+        line-height: 1.5;
+    }
+    iframe {
+        height: 412px;
+    }
+}
+
+.ge_blockquote {
+    padding: 15px;
+    margin: 15px;
+    border-left: $base-border-blue;
+    background: $lightgrey;
+}
+
+.ge_statement {
+    padding: 15px;
+    margin: 15px;
+    &.open {
+        background: $lightgrey;
+    }
+    .ge_statement_trigger {
+        transition: $base-transition;
+        &:hover,
+        &:focus {
+            color: $orange;
+        }
+    }
+    .ge_statement_el {
+        margin-top: 15px;
+    }
+}
+
+.content_social {
+    display: none;
+}
+
+.content_authorbox {
+    background: $lightgrey;
+    padding: 15px;
+    font-size: 12px;
+    color: $base-font-color;
+    .author {
+        img {
+            border-radius: 50%;
+        }
+        strong {
+            display: inline-block;
+            margin-top: 15px;
+        }
+    }
+    .nav {
+        li {
+            color: $base-font-color;
+            &:hover,
+            &:focus {
+                color: $blue;
+            }
+        }
+    }
+}
+
+h2.comments {
+    font-size: 14px;
+    color: $blue;
+    font-family: $roboto;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    margin-top: 26px;
+}
+
+.comment {
+    @include clearfix();
+    background: transparent;
+    .comment_avatar {
+        a {
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+    .comment_con {
+        min-height: auto;
+        .comment_head {
+            font-size: 12px;
+            .user_status {
+                border-radius: 50%;
+                &.online {
+                    background: $green;
+                }
+                &.offline {
+                    background: $red;
+                }
+            }
+            a {
+                color: $blue;
+                font-weight: normal;
+                &:hover,
+                &:focus {
+                    color: $orange;
+                }
+            }
+        }
+        .comment_text {
+            font-size: 14px;
+        }
+    }
+    .comment_footer {
+        box-shadow: none;
+        border-top: none;
+        border-bottom: $base-border;
+        height: auto;
+        @include clearfix();
+        padding: 0;
+        margin: 0;
+        padding-bottom: 15px;
+        margin-top: 15px;
+        .comment_buttons {
+            a {
+                @extend .button;
+                &:last-of-type {
+                    margin-right: 4px;
+                    &:after {
+                        content: "";
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.forum_ed_quote {
+    color: $base-font-color;
+    background: $lightgrey;
+    margin: 0;
+    padding: 15px;
+}
+
+form {
+    .forum_editor {
+        .controls {
+            li {
+                input {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}
+
+.ge_h3 {
+    font-size: 16px;
+    color: $blue;
+    font-family: $roboto;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    margin-top: 26px;
+    border: none;
+    text-align: left;
+}
+
+.pagination {
+    margin: 15px 0;
+    ul {
+        li {
+            a {
+                @extend .button;
+            }
+            &.active {
+                a {
+                    @extend .is-blue;
+                    border: none;
+                }
+            }
+        }
     }
 }
