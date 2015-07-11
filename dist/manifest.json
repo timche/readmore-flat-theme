@@ -3,7 +3,7 @@
 
     "name": "Readmore Flat Theme",
     "description": "Ein Flat Theme als Chrome Extension für readmore.de",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "author": "timche",
 
     "icons": {
@@ -13,12 +13,13 @@
     },
 
     "permissions": [
-        "http://www.readmore.de"
+        "http://readmore.de/",
+        "http://www.readmore.de/"
     ],
 
     "content_scripts": [
             {
-            "matches": ["http://www.readmore.de/start"],
+            "matches": ["http://readmore.de/start", "http://www.readmore.de/start"],
             "css": ["assets/css/readmore-flat-theme.min.css"],
             "js": ["assets/js/readmore-flat-theme.min.js"],
             "run_at": "document_end"
