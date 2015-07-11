@@ -4,10 +4,15 @@
     width: 200px;
     padding: 0 15px;
     margin-top: -26px;
-}
-
-#c_left .control {
-    margin-top: 26px;
+    .control {
+        margin-top: 26px;
+        opacity: 0;
+    }
+    &:hover {
+        .control {
+            opacity: 1;
+        }
+    }
 }
 
 #c_left h3 {
@@ -20,6 +25,14 @@
     padding-bottom: 6px;
     margin-bottom: 6px;
     margin-top: 26px;
+}
+
+#c_left {
+    h3 {
+        &:nth-of-type(2) {
+            display: none;
+        }
+    }
 }
 
 #c_left .pcgames {

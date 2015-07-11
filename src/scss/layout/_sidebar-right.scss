@@ -4,14 +4,67 @@
     width: 300px;
     padding: 0 15px;
     margin-top: -26px;
-}
-
-#c_right .control {
-    margin-top: 26px;
-}
-
-#c_right .control_betting {
-    margin-top: 22px;
+    &:hover {
+        .control {
+            opacity: 1;
+        }
+        #userscript_reloadForumButton {
+            opacity: 1;
+        }
+    }
+    #userscript_reloadForumButton {
+        opacity: 0;
+        transition: $base-transition;
+    }
+    .control {
+        margin-top: 26px;
+        opacity: 0;
+    }
+    .control_betting {
+        width: 110px;
+        margin-top: 22px;
+        div {
+            display: none;
+        }
+        span {
+            border-radius: 50%;
+            border: none;
+            height: 18px;
+            width: 18px;
+            padding: 0;
+            padding-top: 5px;
+            top: 3px;
+            left: 0;
+            text-align: center;
+            transition: $base-transition;
+            background: $lightgrey;
+            color: $base-font-color;
+            &:hover {
+                background: $blue;
+                color: #fff;
+            }
+        }
+    }
+    br {
+        display: none;
+    }
+    .matches {
+        li {
+            center {
+                a {
+                    color: #999;
+                }
+            }
+        }
+    }
+    >div {
+        &:nth-of-type(8) {
+            text-align: left;
+            >a {
+                @extend .button;
+            }
+        }
+    }
 }
 
 #c_right .matches_filter {
@@ -25,6 +78,9 @@
 #c_right a.matches_event_title {
     font-size: 14px;
     color: $blue;
+    &:hover {
+        color: $orange;
+    }
 }
 
 #c_right ul.matches.live {
@@ -106,11 +162,15 @@ font.score_loss {
 }
 
 #c_right .headlines_cat a {
-    color: #2b91ff;
+    color: $blue;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
-    font-family: $roboto
+    font-family: $roboto;
+    &:hover,
+    &:focus {
+        color: $orange;
+    }
 }
 
 #c_right span.headline_ind {
@@ -159,16 +219,4 @@ font.score_loss {
 #c_right .headlines_cat span.icon {
     margin-top: 4px;
     margin-left: 5px;
-}
-
-#c_right .control_betting span {
-    border-radius: 50%;
-    border: none;
-    height: 18px;
-    width: 18px;
-    padding: 0;
-    padding-top: 5px;
-    top: -7px;
-    left: 23px;
-    text-align: center;
 }
