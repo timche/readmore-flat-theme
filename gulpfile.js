@@ -19,14 +19,14 @@ var src = {}
     src.path = './src';
     src.manifest = src.path + '/manifest.json';
     src.stylesheets = src.path + '/stylesheets/**/*.scss';
-    src.javascripts = src.path + ['/javascripts/vendor/*.js', './src/javascripts/*.js'];
+    src.javascripts = [src.path + '/javascripts/vendor/*.js', src.path + '/javascripts/*.js'];
     src.images = src.path + '/images/**/*';
     src.fonts = src.path + '/fonts/**/*.ttf';
 
 var dist = {}
     dist.path = './dist';
     dist.stylesheets = dist.path + '/assets/css';
-    dist.javascripts = dist.path + 'assets/js';
+    dist.javascripts = dist.path + '/assets/js';
     dist.images = dist.path + '/assets/img';
     dist.fonts = dist.path + '/assets/fonts';
 
