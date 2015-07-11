@@ -19,6 +19,7 @@
 }
 
 #c_content ul.breadcrumbs li+li:before {
+    content: '›';
     padding: 0 8px;
 }
 
