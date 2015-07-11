@@ -33,4 +33,4 @@ Folgende Einstellungen sollten deaktiviert sein, um Fehler zu vermeiden:
 
 ## Screenshots
 ### Startseite
-![Startseite](http://i.imgur.com/82x10RE.png)
+![Startseite](http://i.imgur.com/UDKO9v7.png)
