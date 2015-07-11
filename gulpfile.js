@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 var plumber = require('gulp-plumber');
+var notify = require("gulp-notify");
 var package = require('./package.json');
 
 var dist = './dist';
@@ -25,7 +26,9 @@ gulp.task('manifest', function() {
 
 gulp.task('css', function () {
     return gulp.src(src + '/stylesheets/main.scss')
-    .pipe(plumber())
+    .pipe(plumber({
+        errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
     .pipe(sass.sync({
         includePaths: bourbon
     }))
@@ -47,7 +50,9 @@ gulp.task('js', function() {
         src + '/javascripts/vendor/*js',
         src + '/javascripts/*.js'
     ])
-    .pipe(plumber())
+    .pipe(plumber({
+        errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
     .pipe(concat('readmore-flat-theme.js'))
     .pipe(gulp.dest(dist + '/assets/js'))
     .pipe(uglify())
