@@ -15,14 +15,14 @@ Eine Google Chrome Extension, die das Aussehen der deutschen eSport-Webseite [re
 5. Überprüfen ob "Readmore Flat Theme" als Erweiterung installiert wurde
 5. [readmore.de](http://www.readmore.de) aufrufen/neu laden
 
+## Updaten
+1. Alte Version [deinstallieren](#deinstallation)
+2. Aktuellste Version [installieren](#installation)
+
 ## Deinstallation
 1. "Readmore Flat Theme" in "Erweiterungen" entfernen
 2. Zip und entpackter Ordner löschen
 3. [readmore.de](http://www.readmore.de) neu laden
-
-## Updaten
-1. Alte Version [deinstallieren](#deinstallation)
-2. Aktuellste Version [installieren](#installation)
 
 ## Kompabilität mit anderen Extensions
 ### [Readmore Userscript](https://github.com/thextor/readmore-userscript)
