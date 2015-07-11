@@ -1,1 +1,6 @@
+*.zip
+.DS_Store
+.sass-cache
+Desktop.ini
+dist
 node_modules

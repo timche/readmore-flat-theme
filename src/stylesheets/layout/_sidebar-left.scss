@@ -1,0 +1,93 @@
+#c_left {
+    background: #F7F7F7;
+    border: none;
+    width: 200px;
+    padding: 0 15px;
+    margin-top: -26px;
+    .control {
+        margin-top: 26px;
+        opacity: 0;
+    }
+    &:hover {
+        .control {
+            opacity: 1;
+        }
+    }
+}
+
+#c_left h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    margin-top: 26px;
+}
+
+#c_left {
+    h3 {
+        &:nth-of-type(2) {
+            display: none;
+        }
+    }
+}
+
+#c_left .pcgames {
+    display: none;
+}
+
+#c_left hr {
+    display: none;
+}
+
+#c_left ul li {
+    font-size: 12px;
+    padding: 5px 0;
+    border: none;
+}
+
+#c_left ul li a {
+    color: #515A63;
+    &:hover,
+    &:focus {
+        color: $blue;
+    }
+}
+
+#c_left ul li span.game_icon {
+    width: 17px;
+}
+
+#c_left ul li span.game_icon img {
+    width: 14px;
+    height: 14px;
+    margin-bottom: -2px;
+}
+
+#c_left ul li span.viewer {
+    font-style: normal;
+}
+
+#c_left .gallery_image {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.gallery_image img {
+    width: 100%;
+    height: auto;
+}
+
+#c_left a.small {
+    font-size: 12px;
+    color: #515A63;
+}
+
+#pricehits-up,
+#pricehits,
+#pricehits-down {
+    display: none;
+}

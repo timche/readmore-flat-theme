@@ -1,0 +1,16 @@
+@include font-face("Open Sans", "Open_Sans/OpenSans-Regular", normal, $file-formats: ttf);
+$opensans: 'Open Sans', sans-serif;
+
+@include font-face("Roboto", "../fonts/Roboto/Roboto-Bold", bold, $file-formats: ttf);
+$roboto: 'Roboto', sans-serif;
+
+body {
+    font-family: $opensans;
+    color: $base-font-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    transition: all .2s;
+}
