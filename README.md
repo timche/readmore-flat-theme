@@ -21,7 +21,7 @@ Ein Flat Theme als Chrome Extension für [readmore.de](http://www.readmore.de)
 3. readmore.de neu laden
 
 ## Kompabilität mit anderen Extensions
-### Readmore Userscript
+### [Readmore Userscript](https://github.com/thextor/readmore-userscript)
 Das Readmore Flat Theme ist mit dem Readmore Userscript kompatibel.
 
 Folgende Einstellungen sollten dennoch deaktiviert sein, um Fehler/Bugs zu vermeiden:
