@@ -1,6 +1,6 @@
 .button,
 #{$all-buttons} {
-    background: $lightgrey;
+    background-color: $lightgrey;
     color: #515A63;
     transition: all .2s;
     padding: 6px 12px;
@@ -9,15 +9,26 @@
     cursor: pointer;
     &:hover,
     &:focus {
-        background: $blue;
+        background-color: $blue;
         color: #fff;
     }
     &.is-blue {
-        background: $blue;
+        background-color: $blue;
         color: #fff;
         &:hover,
         &:focus {
-            background: $orange;
+            background-color: $orange;
         }
+    }
+}
+
+input[type="submit"] {
+    background-color: $blue;
+    color: #fff;
+    float: right;
+    &:hover,
+    &:focus {
+        background-color: $orange;
+        color: #fff;
     }
 }

@@ -1,4 +1,7 @@
 @include font-face("Open Sans", "Open_Sans/OpenSans-Regular", normal, $file-formats: ttf);
+@include font-face("Open Sans", "Open_Sans/OpenSans-Italic", normal, italic, $file-formats: ttf);
+@include font-face("Open Sans", "Open_Sans/OpenSans-Semibold", bold, $file-formats: ttf);
+@include font-face("Open Sans", "Open_Sans/OpenSans-SemiboldItalic", bold, italic, $file-formats: ttf);
 $opensans: 'Open Sans', sans-serif;
 
 @include font-face("Roboto", "../fonts/Roboto/Roboto-Bold", bold, $file-formats: ttf);
@@ -13,4 +16,12 @@ body {
 
 a {
     transition: all .2s;
+}
+
+h1 {
+    font-family: $roboto;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 }
