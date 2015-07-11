@@ -7,20 +7,26 @@ var bourbon = require('node-bourbon').includePaths;
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
+var plumber = require('gulp-plumber');
 var package = require('./package.json');
 
+var dist = './dist';
+var src = './src';
+
+
 gulp.task('manifest', function() {
-    return gulp.src('src/manifest.json')
+    return gulp.src(src + 'manifest.json')
     .pipe(replace('{{package.title}}', package.title))
     .pipe(replace('{{package.description}}', package.description))
     .pipe(replace('{{package.version}}', package.version))
     .pipe(replace('{{package.author}}', package.author))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(dist))
 });
 
 gulp.task('css', function () {
-    return gulp.src('src/scss/main.scss')
-    .pipe(sass({
+    return gulp.src(src + '/stylesheets/main.scss')
+    .pipe(plumber())
+    .pipe(sass.sync({
         includePaths: bourbon
     }))
     .pipe(autoprefixer('last 2 version'))
@@ -28,28 +34,31 @@ gulp.task('css', function () {
     .pipe(rename({
         basename: 'readmore-flat-theme'
     }))
+    .pipe(gulp.dest(dist + '/assets/css'))
     .pipe(minifyCSS())
     .pipe(rename({
         suffix: '.min'
     }))
-    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(gulp.dest(dist + '/assets/css'))
 });
 
 gulp.task('js', function() {
     return gulp.src([
-        'src/js/vendor/*js',
-        'src/js/*.js'
+        src + '/javascripts/vendor/*js',
+        src + '/javascripts/*.js'
     ])
+    .pipe(plumber())
     .pipe(concat('readmore-flat-theme.js'))
+    .pipe(gulp.dest(dist + '/assets/js'))
     .pipe(uglify())
     .pipe(rename({
         suffix: '.min'
     }))
-    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(gulp.dest(dist + '/assets/js'))
 });
 
 gulp.task('default', ['manifest', 'css', 'js'], function () {
-    gulp.watch("src/manifest.json", ['manifest']);
-    gulp.watch("src/scss/**/*.scss", ['css']);
-    gulp.watch("src/js/**/*.js", ['js']);
+    gulp.watch(src + 'manifest.json', ['manifest']);
+    gulp.watch(src + '/stylesheets/**/*.scss', ['css']);
+    gulp.watch(src + '/javascripts/**/*.js', ['js']);
 });
