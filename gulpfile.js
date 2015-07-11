@@ -74,10 +74,10 @@ gulp.task('clean', function (cb) {
     del(['./*.zip', dist.path], cb);
 });
 
-gulp.task('zip', function(cb) {
-    return gulp.src(dist.path)
-    .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
-    .pipe(gulp.dest('./'));
+gulp.task('zip', function () {
+    return gulp.src(dist.path + '**/**/*')
+        .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
+        .pipe(gulp.dest(dist.path));
 });
 
 gulp.task('default', ['stylesheets', 'javascripts', 'images', 'fonts', 'manifest'], function () {
