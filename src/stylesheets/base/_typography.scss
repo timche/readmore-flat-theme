@@ -14,14 +14,30 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+@include selection {
+  background-color: $orange;
+  color: #fff;
+}
+
 a {
     transition: all .2s;
+    &[name="plast"] {
+        display: none;
+    }
+}
+
+h1,
+h2 {
+    font-family: $roboto;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
 h1 {
-    font-family: $roboto;
-    font-weight: bold;
     font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 14px;
 }

@@ -1,14 +1,16 @@
-@import 'bourbon';
+@import "bourbon";
 
-@import 'base/variables';
-@import 'base/typography';
+@import "base/variables";
+@import "base/typography";
+@import "base/tables";
 
-@import 'modules/buttons';
-@import 'modules/forms';
+@import "modules/buttons";
+@import "modules/forms";
 
-@import 'layout/general';
-@import 'layout/header';
-@import 'layout/sidebar-left';
-@import 'layout/content';
-@import 'layout/sidebar-right';
-@import 'layout/advertisement';
+@import "layout/general";
+@import "layout/header";
+@import "layout/sidebar-left";
+@import "layout/content";
+@import "layout/sidebar-right";
+@import "layout/advertisement";
+@import "layout/footer";

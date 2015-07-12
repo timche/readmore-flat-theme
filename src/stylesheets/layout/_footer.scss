@@ -1,0 +1,17 @@
+#footer {
+    border: none;
+    background: #13222b;
+    box-shadow: none;
+    div {
+        color: #fff;
+        font-size: 12px;
+        width: 1180px;
+        a {
+            color: #fff;
+            &:hover,
+            &:focus {
+                color: $blue;
+            }
+        }
+    }
+}

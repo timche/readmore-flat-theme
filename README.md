@@ -8,7 +8,7 @@ Eine Google Chrome Extension, die das Aussehen der deutschen eSport-Webseite [re
 [Readmore Flat Theme Thread](http://www.readmore.de/forums/91-technik/60-software/139913-readmore-flat-theme-v0-0-3-chrome-only)
 
 ## Installation
-1. [Aktuellste Version herunterladen](https://github.com/timche/readmore-flat-theme/releases) (readmore-flat-theme-X.X.X-dist.zip)
+1. [Aktuellste Stable-Version herunterladen](https://github.com/timche/readmore-flat-theme/releases) (readmore-flat-theme-X.X.X-dist.zip)
 2. Zip entpacken
 3. In Chrome "Erweiterungen" (Weitere Tools > Erweiterungen) öffnen
 4. "dist"-Ordner in das "Erweiterungen"-Fenster reinziehen
@@ -36,3 +36,6 @@ Folgende Einstellungen sollten deaktiviert sein, um Fehler zu vermeiden:
 ![Startseite](http://i.imgur.com/UDKO9v7.png)
 ### News-Artikel
 ![News-Artikel](http://i.imgur.com/VN3KolR.png)
+### Forum
+![Forum](http://i.imgur.com/ZyWn2bP.png)
+![Forum](http://i.imgur.com/OT1ru6Y.png)

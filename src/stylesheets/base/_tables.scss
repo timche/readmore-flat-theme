@@ -1,0 +1,38 @@
+table {
+    tr {
+        th {
+            font-family: $roboto;
+            font-size: 14px;
+            color: $blue;
+            padding: 15px;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        td {
+            font-family: $opensans;
+            padding: 7.5px 15px;
+            background: none;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            a {
+                color: $base-font-color;
+                &:hover,
+                &:focus {
+                    color: $blue;
+                }
+            }
+            .second_row {
+                font-size: 12px;
+                color: #999;
+            }
+        }
+    }
+}
