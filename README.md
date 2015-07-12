@@ -33,9 +33,9 @@ Folgende Einstellungen sollten deaktiviert sein, um Fehler zu vermeiden:
 
 ## Screenshots
 ### Startseite
-![Startseite](http://i.imgur.com/UDKO9v7.png)
+![Startseite](http://i.imgur.com/kunmGKr.png)
 ### News-Artikel
-![News-Artikel](http://i.imgur.com/VN3KolR.png)
+![News-Artikel](http://i.imgur.com/pCmicI1.png)
 ### Forum
 ![Forum](http://i.imgur.com/ZyWn2bP.png)
 ![Forum](http://i.imgur.com/OT1ru6Y.png)
