@@ -5,7 +5,7 @@
     background: #13222b;
     height: 61px;
     div {
-        background: #13222b;
+        background: none;
         height: inherit;
         div {
             width: 1180px;
@@ -61,6 +61,9 @@
             min-width: 0;
             padding-top: 24px;
             padding-bottom: 20px;
+            >img {
+                display: none;
+            }
             ul {
                 width: auto;
                 top: 61px;
