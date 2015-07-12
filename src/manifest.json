@@ -27,5 +27,7 @@
             "js": ["assets/js/readmore-flat-theme.min.js"],
             "run_at": "document_end"
         }
-    ]
+    ],
+
+    "web_accessible_resources": ["assets/img/avatar-default.png"]
 }
