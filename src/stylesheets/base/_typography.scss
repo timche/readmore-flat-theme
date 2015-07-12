@@ -14,6 +14,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+@include selection {
+  background-color: $orange;
+  color: #fff;
+}
+
 a {
     transition: all .2s;
     &[name="plast"] {
