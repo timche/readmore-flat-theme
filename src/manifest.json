@@ -29,5 +29,5 @@
         }
     ],
 
-    "web_accessible_resources": ["assets/img/avatar-default.png"]
+    "web_accessible_resources": ["assets/fonts/*", "assets/img/*"]
 }
