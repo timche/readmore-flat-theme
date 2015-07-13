@@ -53,14 +53,32 @@
             &.standing.standing_2 {
                 background: $red;
             }
-            .icon_groups {
-                margin: 0;
-            }
         }
         .standing,
         .msg,
         .groups {
             margin-top: 3px;
+        }
+        .icon_msg,
+        .icon_groups {
+            margin: 0;
+            background: none;
+            width: auto;
+            height: auto;
+            vertical-align: middle;
+            &:before {
+                @include fa-icon();
+            }
+        }
+        .icon_msg {
+            &:before {
+                content: $fa-var-envelope;
+            }
+        }
+        .icon_groups {
+            &:before {
+                content: $fa-var-users;
+            }
         }
         .ucp {
             color: #fff;
@@ -72,6 +90,10 @@
             padding-bottom: 20px;
             >img {
                 display: none;
+            }
+            &:after {
+                @include fa-icon();
+                content: $fa-var-angle-down;
             }
             ul {
                 width: auto;
