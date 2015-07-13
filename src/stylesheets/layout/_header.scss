@@ -44,6 +44,15 @@
             margin: 0;
             vertical-align: middle;
             margin-left: 15px;
+            &.standing.standing_0 {
+                background: $green;
+            }
+            &.standing.standing_1 {
+                background: $orange;
+            }
+            &.standing.standing_2 {
+                background: $red;
+            }
             .icon_groups {
                 margin: 0;
             }

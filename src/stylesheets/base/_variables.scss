@@ -1,15 +1,19 @@
 // Colors
-$base-font-color: #515A63;
-$blue: #2887ee;
-$orange: #FFB400;
-$lightgrey: #e9eaed;
-$green: #00c240;
-$red: #d41313;
-$yellow: #ffe600;
+$base-font-color: rgb(82, 90, 99);
+$base-bg-color: rgb(247, 247, 247);
+$blue: rgb(41, 135, 238);
+$green: rgb(0, 194, 64);
+$grey: darken($base-bg-color, 6%);
+$orange: rgb(255, 180, 0);
+$red: rgb(212, 19, 19);
+$yellow: rgb(255, 230, 0);
 
 // Border
-$base-border: 1px solid #e0e0e0;
+$base-border: 1px solid $grey;
 $base-border-blue: 2px solid $blue;
 
 // Transitions
 $base-transition: all 0.2s;
+
+// Page-Settings
+$page-width: 1200px;

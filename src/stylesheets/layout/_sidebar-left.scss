@@ -1,5 +1,5 @@
 #c_left {
-    background: #F7F7F7;
+    background: transparent;
     border: none;
     width: 200px;
     padding: 0 15px;
@@ -25,6 +25,9 @@
     padding-bottom: 6px;
     margin-bottom: 6px;
     margin-top: 26px;
+    &.mod {
+        color: $blue;
+    }
 }
 
 #c_left {

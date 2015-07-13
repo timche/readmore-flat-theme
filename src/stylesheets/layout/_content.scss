@@ -1,6 +1,6 @@
 #c_content {
     font-size: 14px;
-    background: #F7F7F7;
+    background: transparent;
     width: 700px;
     >a {
         &:last-of-type {
@@ -109,7 +109,7 @@ a.load_more {
     padding: 15px;
     margin: 15px;
     border-left: $base-border-blue;
-    background: $lightgrey;
+    background: $grey;
 }
 
 .ge_statement,
@@ -117,7 +117,7 @@ a.load_more {
     padding: 15px;
     margin: 15px;
     &.open {
-        background: $lightgrey;
+        background: $grey;
     }
     .ge_statement_trigger {
         transition: $base-transition;
@@ -140,7 +140,7 @@ a.load_more {
 }
 
 .content_authorbox {
-    background: $lightgrey;
+    background: $grey;
     padding: 15px;
     font-size: 12px;
     color: $base-font-color;
@@ -252,7 +252,7 @@ h2.comments {
 
 .forum_ed_quote {
     color: $base-font-color;
-    background: $lightgrey;
+    background: $grey;
     margin: 0;
     padding: 15px;
 }
@@ -410,7 +410,7 @@ form {
             background: $green;
         }
         &.read {
-            background: $lightgrey;
+            background: $grey;
         }
         &.unread {
             background: $green;

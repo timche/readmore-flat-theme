@@ -1,5 +1,5 @@
 #c_right {
-    background: #F7F7F7;
+    background: transparent;
     border: none;
     width: 300px;
     padding: 0 15px;
@@ -37,7 +37,7 @@
             left: 0;
             text-align: center;
             transition: $base-transition;
-            background: $lightgrey;
+            background: $grey;
             color: $base-font-color;
             &:hover {
                 background: $blue;
