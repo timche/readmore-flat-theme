@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var bourbon = require('node-bourbon').includePaths;
+var bump = require('gulp-bump');
 var concat = require('gulp-concat');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
@@ -71,13 +72,19 @@ gulp.task('manifest', function() {
 });
 
 gulp.task('clean', function (cb) {
-    del(['./*.zip', dist.path], cb);
+    del([dist.path], cb);
 });
 
 gulp.task('zip', function () {
     return gulp.src(dist.path + '**/**/*')
     .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
     .pipe(gulp.dest(dist.path));
+});
+
+gulp.task('bump', function(){
+    gulp.src('./package.json')
+    .pipe(bump())
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('default', ['stylesheets', 'javascripts', 'images', 'fonts', 'manifest'], function () {
