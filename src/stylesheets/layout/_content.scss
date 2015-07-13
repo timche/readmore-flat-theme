@@ -277,9 +277,11 @@ form {
                     background-image: none;
                 }
                 &:first-child {
-                    input {
-                        @include fa-icon;
-                        content: $fa-var-bold;
+                    input[type="button"] {
+                        &:before {
+                            @include fa-icon;
+                            content: $fa-var-bold;
+                        }
                     }
                 }
             }
