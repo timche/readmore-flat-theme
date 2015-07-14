@@ -1,14 +1,13 @@
 @import "bourbon";
 
 @import "base/variables";
-@import "vendor/font-awesome/font-awesome";
+@import "base/font-awesome";
 @import "base/typography";
-@import "base/tables";
-@import "base/forms";
 @import "base/animations";
 
 @import "modules/buttons";
 @import "modules/forms";
+@import "modules/tables";
 
 @import "layout/general";
 @import "layout/header";

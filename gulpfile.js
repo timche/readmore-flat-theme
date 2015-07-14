@@ -20,6 +20,8 @@ var src = {}
     src.path = './src';
     src.manifest = src.path + '/manifest.json';
     src.stylesheets = src.path + '/stylesheets/**/*.scss';
+    src.stylesheetsMain = src.path + '/stylesheets/main.scss';
+    src.stylesheetsFonts = src.path + '/stylesheets/fonts.scss';
     src.javascripts = [src.path + '/javascripts/vendor/*.js', src.path + '/javascripts/*.js'];
     src.images = src.path + '/images/**/*';
     src.fonts = src.path + '/fonts/**/*.ttf';
@@ -31,14 +33,24 @@ var dist = {}
     dist.images = dist.path + '/assets/img';
     dist.fonts = dist.path + '/assets/fonts';
 
-gulp.task('stylesheets', function () {
-    return gulp.src(src.stylesheets)
+gulp.task('stylesheets:main', function () {
+    return gulp.src(src.stylesheetsMain)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass.sync({includePaths: bourbon}))
     .pipe(autoprefixer('last 2 version'))
+    .pipe(rename({basename: package.name}))
     .pipe(replace(';', ' !important;'))
+    .pipe(gulp.dest(dist.stylesheets))
     .pipe(minifyCSS())
-    .pipe(rename({basename: package.name, suffix: '.min'}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(dist.stylesheets))
+});
+
+gulp.task('stylesheets:fonts', function () {
+    return gulp.src(src.stylesheetsFonts)
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(sass.sync({includePaths: bourbon}))
+    .pipe(rename({basename: package.name + '-fonts'}))
     .pipe(gulp.dest(dist.stylesheets))
 });
 
@@ -46,6 +58,7 @@ gulp.task('javascripts', function() {
     return gulp.src(src.javascripts)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(concat(package.name + '.js'))
+    .pipe(gulp.dest(dist.javascripts))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.javascripts))
@@ -71,14 +84,15 @@ gulp.task('manifest', function() {
     .pipe(gulp.dest(dist.path))
 });
 
-gulp.task('clean', function (cb) {
-    del([dist.path], cb);
-});
-
-gulp.task('zip', function () {
-    return gulp.src(dist.path + '**/**/*')
-    .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
-    .pipe(gulp.dest(dist.path));
+gulp.task('manifest:build', function() {
+    return gulp.src(src.manifest)
+    .pipe(replace('{{package.title}}', package.title))
+    .pipe(replace('{{package.description}}', package.description))
+    .pipe(replace('{{package.version}}', package.version))
+    .pipe(replace('{{package.author}}', package.author))
+    .pipe(replace(package.name + '.css', package.name + '.min.css'))
+    .pipe(replace('.js', '.min.js'))
+    .pipe(gulp.dest(dist.path))
 });
 
 gulp.task('bump', function(){
@@ -87,8 +101,23 @@ gulp.task('bump', function(){
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['stylesheets', 'javascripts', 'images', 'fonts', 'manifest'], function () {
-    gulp.watch(src.stylesheets, ['stylesheets']);
+gulp.task('zip', function () {
+    return gulp.src(dist.path + '**/**/*')
+    .pipe(zip(package.name + '-' + package.version + '-dist.zip'))
+    .pipe(gulp.dest(dist.path));
+});
+
+gulp.task('clean', function (cb) {
+    del([dist.path], cb);
+});
+
+gulp.task('clean:build', function (cb) {
+    del([dist.stylesheets + '/' + package.name + '.css', dist.javascripts + '/' + package.name + '.js'], cb);
+});
+
+gulp.task('default', function (cb) {
+    sequence('clean', ['stylesheets:main', 'stylesheets:fonts', 'javascripts', 'images', 'fonts', 'manifest'], cb);
+    gulp.watch(src.stylesheets, ['stylesheets:main', 'stylesheets:fonts']);
     gulp.watch(src.javscripts, ['javascripts']);
     gulp.watch(src.images, ['images']);
     gulp.watch(src.fonts, ['fonts']);
@@ -96,5 +125,5 @@ gulp.task('default', ['stylesheets', 'javascripts', 'images', 'fonts', 'manifest
 });
 
 gulp.task('build', function(cb) {
-    sequence('clean', 'stylesheets', 'javascripts', 'images', 'fonts', 'manifest', 'zip', cb);
+    sequence('clean', ['stylesheets:main', 'stylesheets:fonts', 'javascripts', 'images', 'fonts', 'manifest:build'], 'clean:build', 'zip', cb);
 });
