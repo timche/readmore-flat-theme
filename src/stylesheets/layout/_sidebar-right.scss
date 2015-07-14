@@ -1,5 +1,5 @@
 #c_right {
-    background: #F7F7F7;
+    background: transparent;
     border: none;
     width: 300px;
     padding: 0 15px;
@@ -21,7 +21,7 @@
         opacity: 0;
     }
     .control_betting {
-        width: 110px;
+        width: 94px;
         margin-top: 22px;
         div {
             display: none;
@@ -29,16 +29,18 @@
         span {
             border-radius: 50%;
             border: none;
-            height: 18px;
-            width: 18px;
+            height: 20px;
+            width: 20px;
             padding: 0;
+            padding-left: 1px;
             padding-top: 5px;
             top: 3px;
             left: 0;
             text-align: center;
             transition: $base-transition;
-            background: $lightgrey;
+            background: $grey;
             color: $base-font-color;
+            font-size: 10px;
             &:hover {
                 background: $blue;
                 color: #fff;
@@ -76,6 +78,7 @@
 }
 
 #c_right a.matches_event_title {
+    font-family: $roboto;
     font-size: 14px;
     color: $blue;
     &:hover {
@@ -132,7 +135,7 @@ font.score_loss {
 }
 
 #c_right ul li span.betting_rank {
-    width: 11px;
+    width: 25px;
 }
 
 #c_right h3 {
@@ -146,6 +149,32 @@ font.score_loss {
     padding-bottom: 6px;
     margin-bottom: 10px;
     margin-top: 26px;
+    &:before {
+        @include fa-icon;
+        width: 1.28571429em;
+        text-align: center;
+        margin-right: 4px;
+    }
+    &:nth-of-type(1) {
+        &:before {
+            content: $fa-var-bars;
+        }
+    }
+    &:nth-of-type(2) {
+        &:before {
+            content: $fa-var-trophy;
+        }
+    }
+    &:nth-of-type(3) {
+        &:before {
+            content: $fa-var-globe;
+        }
+    }
+    &:nth-of-type(4) {
+        &:before {
+            content: $fa-var-comments;
+        }
+    }
 }
 
 
@@ -262,5 +291,11 @@ h3 {
     .r {
         margin-top: 4px;
         margin-right: 0;
+    }
+}
+
+#c_right #blogs_list h3 {
+    &:before {
+        content: $fa-var-book;
     }
 }

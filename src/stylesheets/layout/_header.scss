@@ -44,14 +44,47 @@
             margin: 0;
             vertical-align: middle;
             margin-left: 15px;
-            .icon_groups {
-                margin: 0;
+            &.standing.standing_0 {
+                background: $green;
+            }
+            &.standing.standing_1 {
+                background: $orange;
+            }
+            &.standing.standing_2 {
+                background: $red;
             }
         }
         .standing,
         .msg,
         .groups {
             margin-top: 3px;
+        }
+        .icon_msg,
+        .icon_groups {
+            margin: 0;
+            background: none;
+            width: auto;
+            height: auto;
+            vertical-align: middle;
+            &:before {
+                @include fa-icon();
+            }
+            &.new {
+                &:before {
+                    color: $orange;
+                    animation: blink 1s infinite;
+                }
+            }
+        }
+        .icon_msg {
+            &:before {
+                content: $fa-var-envelope;
+            }
+        }
+        .icon_groups {
+            &:before {
+                content: $fa-var-users;
+            }
         }
         .ucp {
             color: #fff;
@@ -63,6 +96,10 @@
             padding-bottom: 20px;
             >img {
                 display: none;
+            }
+            &:after {
+                @include fa-icon();
+                content: $fa-var-angle-down;
             }
             ul {
                 width: auto;

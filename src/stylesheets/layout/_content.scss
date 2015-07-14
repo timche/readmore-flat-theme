@@ -1,6 +1,6 @@
 #c_content {
     font-size: 14px;
-    background: #F7F7F7;
+    background: transparent;
     width: 700px;
     >a {
         &:last-of-type {
@@ -32,8 +32,13 @@
     padding: 0 8px;
 }
 
-#c_content hr {
-    display: none;
+#c_content {
+    hr {
+        margin: 0;
+    }
+    >hr {
+        display: none;
+    }
 }
 
 .content_head {
@@ -82,6 +87,12 @@
     a {
         @extend .button;
         margin-left: 2px;
+        &:first-child {
+            &:before {
+                @extend %icon;
+                @extend %icon-users;
+            }
+        }
         &:nth-child(2) {
             @extend .is-blue;
         }
@@ -109,7 +120,7 @@ a.load_more {
     padding: 15px;
     margin: 15px;
     border-left: $base-border-blue;
-    background: $lightgrey;
+    background: $grey;
 }
 
 .ge_statement,
@@ -117,7 +128,7 @@ a.load_more {
     padding: 15px;
     margin: 15px;
     &.open {
-        background: $lightgrey;
+        background: $grey;
     }
     .ge_statement_trigger {
         transition: $base-transition;
@@ -140,7 +151,7 @@ a.load_more {
 }
 
 .content_authorbox {
-    background: $lightgrey;
+    background: $grey;
     padding: 15px;
     font-size: 12px;
     color: $base-font-color;
@@ -252,7 +263,7 @@ h2.comments {
 
 .forum_ed_quote {
     color: $base-font-color;
-    background: $lightgrey;
+    background: $grey;
     margin: 0;
     padding: 15px;
 }
@@ -261,11 +272,15 @@ form {
     .forum_editor {
         .controls {
             li {
-                input {
-                    margin-right: 4px;
-                }
+                margin-right: 4px;
             }
         }
+    }
+}
+
+.forum_thread_reply {
+    h2 {
+        font-size: 16px;
     }
 }
 
@@ -352,6 +367,17 @@ form {
     .post {
         font-size: 14px;
         line-height: 1.5;
+        hr {
+            display: block;
+            background: $grey;
+        }
+    }
+    &:hover {
+        .control {
+            a {
+                opacity: 1;
+            }
+        }
     }
     .control {
         box-shadow: none;
@@ -367,13 +393,45 @@ form {
         span {
             color: #999;
             font-size: 12px;
+            margin-left: 150px;
         }
         a {
             @extend .button;
+            transition: $base-transition;
+            opacity: 0;
             margin-right: 4px;
+            text-indent: -9999px;
+            position: relative;
+            padding-left: 18px;
+            padding-right: 18px;
             &:after {
                 content: "";
                 padding: 0;
+            }
+            &:before {
+                @include fa-icon();
+                position: absolute;
+                top: 0;
+                left: 9999px;
+                margin-top: 10px;
+            }
+            &:nth-last-child(3) {
+                &:before {
+                    content: $fa-var-pencil;
+                    margin-left: 14px;
+                }
+            }
+            &:nth-last-child(2) {
+                &:before {
+                    content: $fa-var-exclamation;
+                    margin-left: 16px;
+                }
+            }
+            &:last-child {
+                &:before {
+                    content: $fa-var-quote-left;
+                    margin-left: 13px;
+                }
             }
         }
     }
@@ -410,7 +468,7 @@ form {
             background: $green;
         }
         &.read {
-            background: $lightgrey;
+            background: $grey;
         }
         &.unread {
             background: $green;

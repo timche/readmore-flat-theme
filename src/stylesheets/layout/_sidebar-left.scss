@@ -1,5 +1,5 @@
 #c_left {
-    background: #F7F7F7;
+    background: transparent;
     border: none;
     width: 200px;
     padding: 0 15px;
@@ -15,22 +15,48 @@
     }
 }
 
-#c_left h3 {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #e0e0e0;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 6px;
-    margin-bottom: 6px;
-    margin-top: 26px;
-}
-
 #c_left {
     h3 {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #e0e0e0;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 6px;
+        margin-bottom: 6px;
+        margin-top: 26px;
+        &:before {
+            @include fa-icon;
+            width: 1.28571429em;
+            text-align: center;
+            margin-right: 4px;
+        }
+        &:nth-of-type(1) {
+            &:before {
+                content: $fa-var-video-camera;
+            }
+        }
         &:nth-of-type(2) {
             display: none;
+        }
+        &:nth-of-type(3) {
+            &:before {
+                content: $fa-var-gamepad;
+            }
+        }
+        &:nth-of-type(4) {
+            &:before {
+                content: $fa-var-image;
+            }
+        }
+        &:nth-of-type(5) {
+            &:before {
+                content: $fa-var-user;
+            }
+        }
+        &.mod {
+            color: $blue;
         }
     }
 }
