@@ -9,4 +9,4 @@
 
 @include font-face("Roboto", "#{$extension-url}/assets/fonts/roboto/roboto-bold", bold, $file-formats: ttf);
 
-@include font-face("FontAwesome", "#{$extension-url}/assets/fonts/fontawesome/fontawesome-webfont", normal, $file-formats: ttf);
+@include font-face("FontAwesome", "#{$extension-url}/assets/fonts/fontawesome/fontawesome", normal, $file-formats: ttf);
