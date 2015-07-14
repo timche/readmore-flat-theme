@@ -69,6 +69,12 @@
             &:before {
                 @include fa-icon();
             }
+            &.new {
+                &:before {
+                    color: $orange;
+                    animation: blink 1s infinite;
+                }
+            }
         }
         .icon_msg {
             &:before {
