@@ -1,10 +1,10 @@
-@include font-face("Open Sans", "chrome-extension://alnojebiijdhcodononldbifogbfaddj/assets/fonts/opensans/opensans-regular", normal, $file-formats: ttf);
-@include font-face("Open Sans", "chrome-extension://alnojebiijdhcodononldbifogbfaddj/assets/fonts/opensans/opensans-italic", normal, italic, $file-formats: ttf);
-@include font-face("Open Sans", "chrome-extension://alnojebiijdhcodononldbifogbfaddj/assets/fonts/opensans/opensans-semibold", bold, $file-formats: ttf);
-@include font-face("Open Sans", "chrome-extension://alnojebiijdhcodononldbifogbfaddj/assets/fonts/opensans/opensans-semibold-italic", bold, italic, $file-formats: ttf);
+@include font-face("Open Sans", "#{$extension-url}/assets/fonts/opensans/opensans-regular", normal, $file-formats: ttf);
+@include font-face("Open Sans", "#{$extension-url}/assets/fonts/opensans/opensans-italic", normal, italic, $file-formats: ttf);
+@include font-face("Open Sans", "#{$extension-url}/assets/fonts/opensans/opensans-semibold", bold, $file-formats: ttf);
+@include font-face("Open Sans", "#{$extension-url}/assets/fonts/opensans/opensans-semibold-italic", bold, italic, $file-formats: ttf);
 $opensans: 'Open Sans', sans-serif;
 
-@include font-face("Roboto", "chrome-extension://alnojebiijdhcodononldbifogbfaddj/assets/fonts/roboto/roboto-bold", bold, $file-formats: ttf);
+@include font-face("Roboto", "#{$extension-url}/assets/fonts/roboto/roboto-bold", bold, $file-formats: ttf);
 $roboto: 'Roboto', sans-serif;
 
 body {
