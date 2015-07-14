@@ -273,17 +273,6 @@ form {
         .controls {
             li {
                 margin-right: 4px;
-                input {
-                    background-image: none;
-                }
-                &:first-child {
-                    input[type="button"] {
-                        &:before {
-                            @include fa-icon;
-                            content: $fa-var-bold;
-                        }
-                    }
-                }
             }
         }
     }
