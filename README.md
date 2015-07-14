@@ -22,10 +22,4 @@ Folgende Einstellungen sollten deaktiviert sein, um Fehler zu vermeiden:
 * Breites Design
 
 ## Screenshots
-### Startseite
-![Startseite](http://i.imgur.com/kunmGKr.png)
-### News-Artikel
-![News-Artikel](http://i.imgur.com/pCmicI1.png)
-### Forum
-![Forum](http://i.imgur.com/ZyWn2bP.png)
-![Forum](http://i.imgur.com/OT1ru6Y.png)
+Siehe [Chrome Web Store](https://chrome.google.com/webstore/detail/readmore-flat-theme/ocmchkcmbgeceokandifjnbadnajeljk)
