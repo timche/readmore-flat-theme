@@ -17,7 +17,7 @@ var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');
 
 var src = {}
-    src.pathTheme = './src';
+    src.path = './src';
     src.pathTheme = './src/theme';
     src.pathOptions = './src/options';
 
