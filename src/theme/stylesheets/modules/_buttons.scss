@@ -1,7 +1,7 @@
 .button,
 #{$all-buttons} {
-    background-color: $grey;
-    color: #515A63;
+    background-color: $seconday-bg-color;
+    color: $primary-font-color;
     transition: all .2s;
     padding: 6px 12px;
     font-size: 12px;

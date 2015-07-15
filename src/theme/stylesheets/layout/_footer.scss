@@ -1,13 +1,13 @@
 #footer {
     border: none;
-    background: #13222b;
+    background: $nav-bg-color;
     box-shadow: none;
     div {
-        color: #fff;
+        color: $nav-font-color;
         font-size: 12px;
         width: 1180px;
         a {
-            color: #fff;
+            color: $nav-font-color;
             &:hover,
             &:focus {
                 color: $blue;

@@ -1,6 +1,10 @@
 body {
-    background: $base-bg-color;
+    background: $primary-bg-color;
     padding-top: 100px;
+    font-family: $opensans;
+    color: $primary-font-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #monkey {
