@@ -38,8 +38,8 @@
             left: 0;
             text-align: center;
             transition: $base-transition;
-            background: $grey;
-            color: $base-font-color;
+            background: $seconday-bg-color;
+            color: $primary-font-color;
             font-size: 10px;
             &:hover {
                 background: $blue;
@@ -54,7 +54,7 @@
         li {
             center {
                 a {
-                    color: #999;
+                    color: $seconday-font-color;
                 }
             }
         }
@@ -102,7 +102,12 @@
 }
 
 #c_right ul.matches li span.vs {
-    color: $base-font-color;
+    color: $primary-font-color;
+}
+
+#c_right ul li span.betting_stats,
+#c_right ul li span.betting_points {
+    color: $seconday-font-color;
 }
 
 font.live {
@@ -143,7 +148,7 @@ font.score_loss {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: $base-border;
     margin: 0;
     padding: 0;
     padding-bottom: 6px;
@@ -188,7 +193,7 @@ font.score_loss {
 
 #c_right .headlines_cat {
     font-size: 12px;
-    color: #999;
+    color: $seconday-font-color;
     background: none;
     border: none;
     height: auto;
@@ -220,13 +225,13 @@ font.score_loss {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    color: $base-font-color;
+    color: $primary-font-color;
     border: none;
     padding: 6px 0;
 }
 
 #c_right ul li a {
-    color: #515A63;
+    color: $primary-font-color;
     &:hover,
     &:focus {
         color: $blue;
@@ -244,7 +249,7 @@ font.score_loss {
 }
 
 #c_right span.forum {
-    color: #515A63;
+    color: $primary-font-color;
     font-weight: 700;
     &:hover,
     &:focus {

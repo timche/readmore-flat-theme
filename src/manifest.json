@@ -7,35 +7,46 @@
     "author": "{{package.author}}",
 
     "icons": {
-      "16": "assets/img/icons/icon16.png",
-      "32": "assets/img/icons/icon32.png",
-      "48": "assets/img/icons/icon48.png",
-      "128": "assets/img/icons/icon128.png"
+        "16": "assets/img/icons/icon16.png",
+        "32": "assets/img/icons/icon32.png",
+        "48": "assets/img/icons/icon48.png",
+        "128": "assets/img/icons/icon128.png"
+    },
+
+    "options_ui": {
+        "page": "assets/views/options.html",
+        "chrome_style": true
+    },
+
+    "background": {
+        "scripts": ["assets/js/event.js"],
+        "persistent": false
     },
 
     "permissions": [
+        "storage",
         "http://www.readmore.de/"
     ],
 
     "content_scripts": [
-            {
+        {
             "matches": [
                 "http://www.readmore.de/start",
                 "http://www.readmore.de/news/*",
                 "http://www.readmore.de/forums/*"
             ],
             "css": [
-                "assets/css/readmore-flat-theme.css",
                 "assets/css/readmore-flat-theme-fonts.css"
             ],
             "js": [
                 "assets/js/readmore-flat-theme.js"
             ],
-            "run_at": "document_end"
+            "run_at": "document_start"
         }
     ],
 
     "web_accessible_resources": [
+        "assets/css/*",
         "assets/fonts/*",
         "assets/img/*"
     ]

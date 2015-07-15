@@ -23,7 +23,7 @@ table {
                 padding-right: 0;
             }
             a {
-                color: $base-font-color;
+                color: $primary-font-color;
                 &:hover,
                 &:focus {
                     color: $blue;
@@ -31,7 +31,7 @@ table {
             }
             .second_row {
                 font-size: 12px;
-                color: #999;
+                color: $seconday-font-color;
             }
         }
     }

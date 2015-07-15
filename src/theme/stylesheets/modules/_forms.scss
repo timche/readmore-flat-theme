@@ -1,12 +1,14 @@
 #{$all-text-inputs} {
-    border: 1px solid #e9eaed;
+    background: $seconday-bg-color;
+    border: none;
     font-size: 14px;
-    color: $base-font-color;
+    color: $primary-font-color;
     line-height: 1.5;
     font-family: $opensans;
 }
 
 textarea {
     resize: vertical;
-    height: 150px;
+    min-height: 150px;
+    padding: 15px;
 }
