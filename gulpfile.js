@@ -18,8 +18,11 @@ var zip = require('gulp-zip');
 
 var src = {}
     src.path = './src';
+    src.pathEvent = './src/event';
     src.pathTheme = './src/theme';
     src.pathOptions = './src/options';
+
+    src.eventJavascripts = src.pathEvent + '/javascripts/*.js';
 
     src.manifest = src.path + '/manifest.json';
 
@@ -90,6 +93,16 @@ gulp.task('javascripts:options', function() {
     .pipe(gulp.dest(dist.javascripts))
 });
 
+gulp.task('javascripts:event', function() {
+    return gulp.src(src.eventJavascripts)
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(concat('event.js'))
+    .pipe(gulp.dest(dist.javascripts))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(dist.javascripts))
+});
+
 gulp.task('images', function() {
     return gulp.src(src.themeImages)
     .pipe(imagemin())
@@ -145,7 +158,13 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('clean:build', function (cb) {
-    del([dist.stylesheets + '/' + package.name + '.css', dist.javascripts + '/' + package.name + '.js'], cb);
+    del([
+        dist.stylesheets + '/' + package.name + '-light.css',
+        dist.stylesheets + '/' + package.name + '-dark.css',
+        dist.javascripts + '/' + package.name + '.js',
+        dist.javascripts + '/' + 'options.js',
+        dist.javascripts + '/' + 'event.js'
+    ], cb);
 });
 
 gulp.task('default', function (cb) {
@@ -157,6 +176,7 @@ gulp.task('default', function (cb) {
         'stylesheets:fonts',
         'javascripts',
         'javascripts:options',
+        'javascripts:event',
         'images',
         'fonts',
         'manifest'
@@ -181,6 +201,7 @@ gulp.task('build', function(cb) {
             'stylesheets:fonts',
             'javascripts',
             'javascripts:options',
+            'javascripts:event',
             'images',
             'fonts',
             'manifest:build'

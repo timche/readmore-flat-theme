@@ -18,6 +18,11 @@
         "chrome_style": true
     },
 
+    "background": {
+        "scripts": ["assets/js/event.js"],
+        "persistent": false
+    },
+
     "permissions": [
         "storage",
         "http://www.readmore.de/"
