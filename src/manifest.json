@@ -31,17 +31,17 @@
                 "http://www.readmore.de/forums/*"
             ],
             "css": [
-                "assets/css/readmore-flat-theme.css",
                 "assets/css/readmore-flat-theme-fonts.css"
             ],
             "js": [
                 "assets/js/readmore-flat-theme.js"
             ],
-            "run_at": "document_end"
+            "run_at": "document_start"
         }
     ],
 
     "web_accessible_resources": [
+        "assets/css/*",
         "assets/fonts/*",
         "assets/img/*"
     ]

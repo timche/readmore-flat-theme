@@ -23,20 +23,20 @@ var src = {}
 
     src.manifest = src.path + '/manifest.json';
 
-    src.optionsJavascripts = src.pathOptions + '/javascripts/*.js';
-    src.optionsStylesheets = src.pathOptions + '/stylesheets/*.css';
-    src.optionsViews = src.pathOptions + '/views/**/*.html';
+    src.optionsJavascripts = src.pathOptions + '/javascripts/*';
+    src.optionsStylesheets = src.pathOptions + '/stylesheets/*';
+    src.optionsViews = src.pathOptions + '/views/*';
 
-    src.themeFonts = src.pathTheme + '/fonts/**/*.ttf';
+    src.themeFonts = src.pathTheme + '/fonts/**/*';
     src.themeImages = src.pathTheme + '/images/**/*';
     src.themeJavascripts = [src.pathTheme + '/javascripts/vendor/*.js', src.pathTheme + '/javascripts/*.js'];
-    src.themeStylesheets = src.pathTheme + '/stylesheets/**/*.scss';
-    src.themeStylesheetsFonts = src.pathTheme + '/stylesheets/fonts.scss';
-    src.themeStylesheetsMain = src.pathTheme + '/stylesheets/main.scss';
+    src.themeStylesheets = src.pathTheme + '/stylesheets/**/*';
+    src.themeStylesheetsFonts = src.pathTheme + '/stylesheets/base/fonts.scss';
+    src.themeStylesheetsMain = src.pathTheme + '/stylesheets/*.scss';
 
 var dist = {}
     dist.path = './dist';
-    dist.pathAssets = './dist';
+    dist.pathAssets = './dist/assets';
 
     dist.fonts = dist.pathAssets + '/fonts';
     dist.images = dist.pathAssets + '/img';
@@ -54,7 +54,7 @@ gulp.task('stylesheets:main', function () {
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass.sync({includePaths: bourbon}))
     .pipe(autoprefixer('last 2 version'))
-    .pipe(rename({basename: package.name}))
+    .pipe(rename({prefix: package.name + '-'}))
     .pipe(replace(';', ' !important;'))
     .pipe(gulp.dest(dist.stylesheets))
     .pipe(minifyCSS())
@@ -168,7 +168,7 @@ gulp.task('default', function (cb) {
     gulp.watch(src.optionsViews, ['views:options']);
     gulp.watch(src.themeFonts, ['fonts']);
     gulp.watch(src.themeImages, ['images']);
-    gulp.watch(src.themeJavscripts, ['javascripts']);
+    gulp.watch(src.themeJavascripts, ['javascripts']);
     gulp.watch(src.themeStylesheets, ['stylesheets:main', 'stylesheets:fonts']);
 });
 

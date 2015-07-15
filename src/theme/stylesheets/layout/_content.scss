@@ -20,11 +20,11 @@
 
 #c_content ul.breadcrumbs {
     font-size: 14px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: $base-border;
     margin-bottom: 12px;
 	padding-bottom: 7px;
     margin-top: -14px;
-    color: #999;
+    color: $seconday-font-color;
 }
 
 #c_content ul.breadcrumbs li+li:before {
@@ -48,14 +48,14 @@
 .content_head .subtitle {
     font-size: 12px;
     text-transform: none;
-    color: #999;
+    color: $seconday-font-color;
     padding: 0;
     margin-bottom: 2px;
 }
 
 .content_head .time,
 .content_head .category {
-    color: #999;
+    color: $seconday-font-color;
     font-size: 12px;
 }
 
@@ -83,7 +83,7 @@
 .content_footer {
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: $base-border;
     a {
         @extend .button;
         margin-left: 2px;
@@ -120,7 +120,7 @@ a.load_more {
     padding: 15px;
     margin: 15px;
     border-left: $base-border-blue;
-    background: $grey;
+    background: $seconday-bg-color;
 }
 
 .ge_statement,
@@ -128,7 +128,7 @@ a.load_more {
     padding: 15px;
     margin: 15px;
     &.open {
-        background: $grey;
+        background: $seconday-bg-color;
     }
     .ge_statement_trigger {
         transition: $base-transition;
@@ -151,16 +151,16 @@ a.load_more {
 }
 
 .content_authorbox {
-    background: $grey;
+    background: $seconday-bg-color;
     padding: 15px;
     font-size: 12px;
-    color: $base-font-color;
+    color: $primary-font-color;
     .author {
         img {
             border-radius: 50%;
         }
         strong {
-            color: $base-font-color;
+            color: $primary-font-color;
             display: inline-block;
             margin-top: 15px;
             font-weight: normal;
@@ -168,11 +168,11 @@ a.load_more {
     }
     .nav {
         li {
-            color: #999;
+            color: $seconday-font-color;
             font-size: 12px;
             &:after {
                 content: "•";
-                color: #999;
+                color: $seconday-font-color;
             }
             &:hover,
             &:focus {
@@ -180,7 +180,7 @@ a.load_more {
             }
             &.active {
                 font-weight: normal;
-                color: $base-font-color;
+                color: $primary-font-color;
             }
         }
     }
@@ -192,7 +192,7 @@ h2.comments {
     font-family: $roboto;
     font-weight: 700;
     letter-spacing: 1px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: $base-border;
     margin: 0;
     padding: 0;
     padding-bottom: 6px;
@@ -262,8 +262,8 @@ h2.comments {
 }
 
 .forum_ed_quote {
-    color: $base-font-color;
-    background: $grey;
+    color: $primary-font-color;
+    background: $seconday-bg-color;
     margin: 0;
     padding: 15px;
 }
@@ -273,6 +273,9 @@ form {
         .controls {
             li {
                 margin-right: 4px;
+                input {
+                    border: none;
+                }
             }
         }
     }
@@ -304,6 +307,7 @@ form {
         li {
             a {
                 @extend .button;
+                border: none;
             }
             &.active {
                 a {
@@ -314,7 +318,7 @@ form {
             &.disabled {
                 a {
                     border: none;
-                    padding: 7px 10px;
+                    padding: 6px 10px;
                 }
             }
         }
@@ -323,7 +327,7 @@ form {
 
 .forum_post {
     background: transparent;
-    color: #999;
+    color: $primary-font-color;
     margin: 0;
     padding: 0;
     margin-bottom: 15px;
@@ -334,6 +338,7 @@ form {
         padding-left: 15px;
     }
     .head {
+        color: $seconday-font-color;
         font-size: 12px;
         font-family: $opensans;
     }
@@ -349,7 +354,7 @@ form {
         }
         .ind_thread {
             font-size: 12px;
-            color: #999;
+            color: $seconday-font-color;
             font-family: $opensans;
         }
         .avatar {
@@ -361,15 +366,16 @@ form {
         }
         .stats {
             font-size: 12px;
-            color: #999;
+            color: $seconday-font-color;
         }
     }
     .post {
+        color: inherit;
         font-size: 14px;
         line-height: 1.5;
         hr {
             display: block;
-            background: $grey;
+            background: $seconday-bg-color;
         }
     }
     &:hover {
@@ -391,7 +397,7 @@ form {
         margin-top: 15px;
         position: relative;
         span {
-            color: #999;
+            color: $seconday-font-color;
             font-size: 12px;
             margin-left: 150px;
         }
@@ -468,7 +474,7 @@ form {
             background: $green;
         }
         &.read {
-            background: $grey;
+            background: $seconday-bg-color;
         }
         &.unread {
             background: $green;

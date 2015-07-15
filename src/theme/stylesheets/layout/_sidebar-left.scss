@@ -20,7 +20,7 @@
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 1px;
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: $base-border;
         margin: 0;
         padding: 0;
         padding-bottom: 6px;
@@ -76,7 +76,7 @@
 }
 
 #c_left ul li a {
-    color: #515A63;
+    color: $primary-font-color;
     &:hover,
     &:focus {
         color: $blue;
@@ -94,6 +94,7 @@
 }
 
 #c_left ul li span.viewer {
+    color: $seconday-font-color;
     font-style: normal;
 }
 
@@ -109,7 +110,7 @@
 
 #c_left a.small {
     font-size: 12px;
-    color: #515A63;
+    color: $primary-font-color;
 }
 
 #pricehits-up,
