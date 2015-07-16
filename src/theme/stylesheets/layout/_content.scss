@@ -205,6 +205,7 @@ h2.comments {
 .comment {
     @include clearfix();
     background: transparent;
+    color: $primary-font-color;
     .comment_avatar {
         a {
             img {
@@ -216,6 +217,7 @@ h2.comments {
         min-height: auto;
         .comment_head {
             font-size: 12px;
+            color: $seconday-font-color;
             .user_status {
                 border-radius: 50%;
                 &.online {
@@ -259,6 +261,11 @@ h2.comments {
                     }
                 }
             }
+        }
+        .comment_edit_str {
+          color: $seconday-font-color;
+          font-size: 12px;
+          margin-left: 75px;
         }
     }
 }
