@@ -9,7 +9,7 @@ $roboto: 'Roboto', sans-serif;
 $primary-font-color: rgb(82, 90, 99);
 $seconday-font-color: #999;
 $primary-bg-color: rgb(247, 247, 247);
-$seconday-bg-color: darken($primary-bg-color, 6%);
+$secondary-bg-color: darken($primary-bg-color, 6%);
 $nav-bg-color: #13222b;
 $nav-font-color: #fff;
 $blue: rgb(41, 135, 238);
@@ -19,7 +19,7 @@ $red: rgb(212, 19, 19);
 $yellow: rgb(255, 230, 0);
 
 // Border
-$base-border: 1px solid $seconday-bg-color;
+$base-border: 1px solid $secondary-bg-color;
 $base-border-blue: 2px solid $blue;
 
 // Transitions

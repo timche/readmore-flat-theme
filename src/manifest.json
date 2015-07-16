@@ -42,7 +42,9 @@
             "matches": [
                 "http://www.readmore.de/start",
                 "http://www.readmore.de/news/*",
-                "http://www.readmore.de/forums/*"
+                "http://www.readmore.de/forums/*",
+                "http://www.readmore.de/matches/*",
+                "http://www.readmore.de/betting/*"
             ],
             "css": [
                 "assets/css/readmore-flat-theme-fonts.css"
