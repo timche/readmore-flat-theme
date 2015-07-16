@@ -23,8 +23,7 @@
             "19": "assets/img/icons/icon19.png",
             "38": "assets/img/icons/icon38.png"
         },
-        "default_title": "Readmore Flat Theme",
-        "default_popup": "assets/views/popup.html"
+        "default_popup": "assets/views/options.html"
     },
 
     "background": {

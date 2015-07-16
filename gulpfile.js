@@ -192,7 +192,9 @@ gulp.task('default', function (cb) {
         cb
     );
     gulp.watch(src.manifest, ['manifest']);
+    gulp.watch(src.backgroundJavascripts, ['javascripts:background']);
     gulp.watch(src.optionsJavascripts, ['javascripts:options']);
+    gulp.watch(src.popupViews, ['views:popup']);
     gulp.watch(src.optionsViews, ['views:options']);
     gulp.watch(src.themeFonts, ['fonts']);
     gulp.watch(src.themeImages, ['images']);
