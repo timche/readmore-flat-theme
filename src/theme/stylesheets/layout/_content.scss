@@ -127,9 +127,7 @@ a.load_more {
 .forum_ed_spoiler {
     padding: 15px;
     margin: 15px;
-    &.open {
-        background: $seconday-bg-color;
-    }
+    background: $seconday-bg-color;
     .ge_statement_trigger {
         transition: $base-transition;
         &:hover,
@@ -275,6 +273,15 @@ h2.comments {
     background: $seconday-bg-color;
     margin: 0;
     padding: 15px;
+    .forum_ed_quote {
+      background: lighten($seconday-bg-color, 2%);
+      .forum_ed_spoiler {
+        margin: 0;
+      }
+    }
+    .forum_ed_spoiler {
+      margin: 0;
+    }
 }
 
 form {
