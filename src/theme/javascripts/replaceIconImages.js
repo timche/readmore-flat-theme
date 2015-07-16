@@ -5,8 +5,8 @@ $(document).ready(function() {
   $('img[src$="https://cdn1.readmore.de/img/themes/readmore/arrow_last_item.gif"]').replaceWith('<i class="fa fa-angle-right"></i>');
   $('img[src$="https://cdn1.readmore.de/img/themes/readmore/arrow_last_item2.gif"]').replaceWith('<i class="fa fa-angle-double-right"></i>');
 
-  var forumButtons = $('.controls li input').get(0).outerHTML.replace(/^<input/, "<button");
-  $('.controls li input').replaceWith(forumButtons);
+  // var forumButtons = $('.controls li input').get(0).outerHTML.replace(/^<input/, "<button");
+  // $('.controls li input').replaceWith(forumButtons);
 
   $('.controls li:nth-child(1) button').append('<i class="fa fa-bold"></i>');
   $('.controls li:nth-child(2) button').append('<i class="fa fa-italic"></i>');
