@@ -35,7 +35,7 @@ var src = {}
 
     src.themeFonts = src.pathTheme + '/fonts/**/*';
     src.themeImages = src.pathTheme + '/images/**/*';
-    src.themeJavascripts = [src.pathTheme + '/javascripts/vendor/*.js', src.pathTheme + '/javascripts/*.js'];
+    src.themeJavascripts = [src.pathTheme + '/javascripts/jquery/*.js', src.pathTheme + '/javascripts/vendor/**/*.js', src.pathTheme + '/javascripts/*.js'];
     src.themeStylesheets = src.pathTheme + '/stylesheets/**/*';
     src.themeStylesheetsFonts = src.pathTheme + '/stylesheets/base/fonts.scss';
     src.themeStylesheetsMain = src.pathTheme + '/stylesheets/*.scss';
