@@ -17,8 +17,17 @@
         transition: $base-transition;
     }
     .control {
-        margin-top: 26px;
+        margin-top: 28px;
         opacity: 0;
+        width: auto;
+        height: auto;
+    }
+    .fa {
+      font-size: 16px;
+    }
+    #userscript_reloadForumButton {
+      font-size: 14px;
+      color: $blue;
     }
     .control_betting {
         width: 94px;
@@ -197,6 +206,7 @@ font.score_loss {
     background: none;
     border: none;
     height: auto;
+
 }
 
 #c_right .headlines_cat span {
@@ -264,6 +274,11 @@ font.score_loss {
 #c_right .headlines_cat span.icon {
     margin-top: 4px;
     margin-left: 5px;
+    border: 0;
+    color: $blue;
+    .fa {
+      font-size: 12px;
+    }
 }
 
 .headlines_cat {
@@ -289,13 +304,32 @@ h3 {
     .amt_icon {
         transition: $base-transition;
         opacity: 0;
+        padding: 0;
+        height: auto;
+        color: $blue;
+        margin-left: 6px;
+        margin-top: 3px;
+        .fa {
+          font-size: 14px;
+        }
     }
 }
 
 #forums_list {
-    .r {
-        margin-top: 4px;
-        margin-right: 0;
+    ul {
+      li {
+        .r {
+          color: $seconday-font-color;
+          margin-right: 0;
+          opacity: 0;
+        }
+        &:hover,
+        &:focus {
+          .r {
+            opacity: 1;
+          }
+        }
+      }
     }
 }
 
