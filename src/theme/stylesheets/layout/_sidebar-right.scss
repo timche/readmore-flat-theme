@@ -19,8 +19,6 @@
     .control {
         margin-top: 28px;
         opacity: 0;
-        width: auto;
-        height: auto;
     }
     .fa {
       font-size: 16px;
@@ -41,13 +39,12 @@
             height: 20px;
             width: 20px;
             padding: 0;
-            padding-left: 1px;
             padding-top: 5px;
             top: 3px;
             left: 0;
             text-align: center;
             transition: $base-transition;
-            background: $seconday-bg-color;
+            background: $secondary-bg-color;
             color: $primary-font-color;
             font-size: 10px;
             &:hover {
@@ -76,6 +73,10 @@
             }
         }
     }
+}
+
+#c_right .matches_control {
+    font-size: 12px;
 }
 
 #c_right .matches_filter {
@@ -189,6 +190,13 @@ font.score_loss {
             content: $fa-var-comments;
         }
     }
+    span[style*="float: right"] {
+        display: inline-block;
+        margin-top: 4px;
+        #userscript_reloadForumButton {
+            color: $blue;
+        }
+    }
 }
 
 
@@ -273,7 +281,7 @@ font.score_loss {
 
 #c_right .headlines_cat span.icon {
     margin-top: 4px;
-    margin-left: 5px;
+    margin-left: 10px;
     border: 0;
     color: $blue;
     .fa {
@@ -342,4 +350,9 @@ h3 {
     &:before {
         content: $fa-var-book;
     }
+}
+
+#c_right ul.matches li span.user_bet {
+    color: $orange;
+    font-weight: normal;
 }

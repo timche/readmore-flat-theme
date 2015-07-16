@@ -1,0 +1,226 @@
+#c_content {
+    span[style*="color: #7b7b7b"] {
+        display: block;
+        color: $primary-font-color;
+        margin-top: 15px;
+    }
+}
+
+.match_head {
+    color: $primary-font-color;
+}
+
+.match_head .status {
+    color: $seconday-font-color;
+    font-size: 12px;
+}
+
+.match_head .cov {
+    font-size: 14px;
+}
+
+.match_head .r {
+    font-size: 12px;
+}
+
+.match_head .round {
+    color: $seconday-font-color;
+    font-size: 12px;
+}
+
+.match_up .oppo {
+    font-family: $opensans;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.match_up .bet_ratio {
+    font-size: 12px;
+    color: $primary-font-color;
+    margin-top: 3px;
+}
+
+.match_up .bet {
+    background: none;
+    &:before {
+        @include fa-icon();
+        content: $fa-var-star;
+    }
+    &.active {
+        color: $orange;
+    }
+}
+
+.match_up .c .top {
+    color: $primary-font-color;
+    font-family: $opensans;
+    font-size: 16px;
+}
+
+.match_bets_total {
+    font-size: 12px;
+    color: $seconday-font-color;
+    margin-bottom: 15px;
+}
+
+div[style*="padding: 0px 0px 10px 0px"],
+div[style*="padding: 0px 0px 20px 0px"] {
+    padding: 0;
+    margin-bottom: 15px;
+    div {
+        margin-bottom: 7.5px;
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+.match_lu {
+    text-align: center;
+}
+
+ul.match_subs {
+    color: $primary-font-color;
+}
+
+ul.match_subs li {
+    padding: 0;
+    &:last-child,
+    &:nth-last-child(2) {
+        span.map {
+            margin-top: 7.5px;
+        }
+    }
+}
+
+ul.match_subs li span.map {
+    width: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 7.5px;
+    color: $seconday-font-color;
+}
+
+ul.match_subs li span.opp.opp1,
+ul.match_subs li span.opp.opp2 {
+    width: 299px;
+}
+
+ul.match_subs li span.opp.opp1 {
+    text-align: right;
+    img {
+        float: right;
+        margin-top: 4px;
+        margin-left: 5px;
+    }
+}
+
+ul.match_subs li span.score {
+    width: 76px;
+    text-align: center;
+    font[color="#ff4301"] {
+        color: $red;
+    }
+    font[color="#1846dc"] {
+        color: $blue;
+    }
+}
+
+ul.match_subs li span.opp.opp2 {
+    text-align: left;
+    img {
+        float: left;
+        margin-top: 4px;
+        margin-right: 5px;
+    }
+}
+
+ul.match_subs li.sum {
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 7.5px;
+    margin: 7.5px 0;
+    &:not(:last-child) {
+        border-bottom: $base-border;
+    }
+}
+
+ul.match_subs_heroes {
+    color: $primary-font-color;
+}
+
+ul.match_subs_heroes li .l,
+ul.match_subs_heroes li .r {
+    width: 299px;
+}
+
+ul.match_subs_heroes li .l {
+    text-align: right;
+}
+
+ul.match_subs_heroes li .r {
+    text-align: left;
+}
+
+ul.match_subs_heroes li .sidepick {
+    font-size: 12px;
+    font[color="#2b91ff"] {
+        color: $blue;
+    }
+    font[color="red"] {
+        color: $red;
+    }
+}
+
+ul.match_subs_heroes li .l .picks {
+    img {
+        float: right;
+        margin-top: 4px;
+    }
+}
+
+ul.match_subs_heroes li .r .picks {
+    img {
+        float: left;
+        margin-top: 4px;
+    }
+}
+
+#c_left ul.matches_streams li span.play {
+    background: none;
+    opacity: 0;
+    color: $blue;
+    transition: $base-transition;
+    &:before {
+        @include fa-icon();
+        content: $fa-var-play;
+    }
+}
+
+#c_left ul.matches_streams li span.lang {
+    font-size: 12px;
+    color: $seconday-font-color;
+}
+
+#c_left ul.matches_streams li span.title {
+    color: $primary-font-color;
+    transition: $base-transition;
+}
+
+#c_left ul li span.viewer {
+    color: $seconday-font-color;
+    font-size: 10px;
+}
+
+#c_left ul li a.block {
+    &:hover,
+    &:focus {
+        .title {
+            color: $blue;
+        }
+        .play {
+            opacity: 1;
+        }
+    }
+}

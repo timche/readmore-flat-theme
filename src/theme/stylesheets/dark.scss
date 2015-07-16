@@ -4,10 +4,10 @@
 
 $primary-font-color: #fff;
 $primary-bg-color: #13222b;
-$seconday-bg-color: lighten($primary-bg-color, 10%);
-$seconday-font-color: tint($seconday-bg-color, 40%);
-$nav-bg-color: $seconday-bg-color;
-$base-border: 1px solid $seconday-bg-color;
+$secondary-bg-color: lighten($primary-bg-color, 10%);
+$secondary-font-color: tint($secondary-bg-color, 40%);
+$nav-bg-color: $secondary-bg-color;
+$base-border: 1px solid $secondary-bg-color;
 
 @import "modules/modules";
 
