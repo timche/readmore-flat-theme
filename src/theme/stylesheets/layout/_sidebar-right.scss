@@ -279,6 +279,10 @@ font.score_loss {
     .fa {
       font-size: 12px;
     }
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
 }
 
 .headlines_cat {
@@ -322,6 +326,7 @@ h3 {
           color: $seconday-font-color;
           margin-right: 0;
           opacity: 0;
+          margin-left: 5px;
         }
         &:hover,
         &:focus {

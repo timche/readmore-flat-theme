@@ -14,7 +14,7 @@
         display: none;
     }
     &.col2 {
-        width: 899px;
+        width: 900px;
     }
     h3 {
       color: $primary-font-color;
@@ -131,7 +131,7 @@ a.load_more {
 .ge_statement,
 .forum_ed_spoiler {
     padding: 15px;
-    margin: 15px;
+    margin: 15px 0;
     background: $seconday-bg-color;
     .ge_statement_trigger {
         transition: $base-transition;
@@ -143,10 +143,6 @@ a.load_more {
     .ge_statement_el {
         margin-top: 15px;
     }
-}
-
-.forum_ed_spoiler {
-    margin: 15px 0;
 }
 
 .content_social {
@@ -273,6 +269,14 @@ h2.comments {
           margin-left: 75px;
         }
     }
+    &:hover,
+    &:focus {
+      .comment_buttons {
+        a {
+          opacity: 1;
+        }
+      }
+    }
 }
 
 .forum_ed_quote {
@@ -291,18 +295,24 @@ h2.comments {
     }
 }
 
-form {
-    .forum_editor {
-        .controls {
-            li {
-                margin-right: 4px;
-                input {
-                    border: none;
-                }
+
+.forum_editor {
+    .controls {
+      height: 29px;
+        li {
+            margin-right: 4px;
+            input {
+              background-image: none;
+              border: none;
+              display: none;
+            }
+            button {
+              background-image: none;
             }
         }
     }
 }
+
 
 .forum_thread_reply {
     h2 {
@@ -357,7 +367,8 @@ form {
     &:nth-of-type(1) {
         margin-top: 100px;
     }
-    &.unread {
+    &.unread,
+    &.official {
         padding-left: 15px;
     }
     .head {
