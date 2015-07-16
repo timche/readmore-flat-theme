@@ -1,6 +1,6 @@
 @import "bourbon";
 
-@import "base/variables";
+@import "variables";
 
 @include font-face("Open Sans", "#{$extension-url}/assets/fonts/opensans/opensans-regular", normal, $file-formats: ttf);
 @include font-face("Open Sans", "#{$extension-url}/assets/fonts/opensans/opensans-italic", normal, italic, $file-formats: ttf);

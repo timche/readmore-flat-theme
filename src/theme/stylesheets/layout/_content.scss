@@ -14,7 +14,13 @@
         display: none;
     }
     &.col2 {
-        width: 899px;
+        width: 900px;
+    }
+    h3 {
+      color: $blue;
+      text-align: left;
+      border: none;
+      font-size: 16px;
     }
 }
 
@@ -126,10 +132,8 @@ a.load_more {
 .ge_statement,
 .forum_ed_spoiler {
     padding: 15px;
-    margin: 15px;
-    &.open {
-        background: $seconday-bg-color;
-    }
+    margin: 15px 0;
+    background: $seconday-bg-color;
     .ge_statement_trigger {
         transition: $base-transition;
         &:hover,
@@ -142,10 +146,6 @@ a.load_more {
     }
 }
 
-.forum_ed_spoiler {
-    margin: 15px 0;
-}
-
 .content_social {
     display: none;
 }
@@ -156,8 +156,12 @@ a.load_more {
     font-size: 12px;
     color: $primary-font-color;
     .author {
+        margin-top: 4px;
+        width: 327px;
         img {
             border-radius: 50%;
+            width: 64px;
+            height: 64px;
         }
         strong {
             color: $primary-font-color;
@@ -203,6 +207,7 @@ h2.comments {
 .comment {
     @include clearfix();
     background: transparent;
+    color: $primary-font-color;
     .comment_avatar {
         a {
             img {
@@ -214,6 +219,7 @@ h2.comments {
         min-height: auto;
         .comment_head {
             font-size: 12px;
+            color: $seconday-font-color;
             .user_status {
                 border-radius: 50%;
                 &.online {
@@ -258,6 +264,19 @@ h2.comments {
                 }
             }
         }
+        .comment_edit_str {
+          color: $seconday-font-color;
+          font-size: 12px;
+          margin-left: 75px;
+        }
+    }
+    &:hover,
+    &:focus {
+      .comment_buttons {
+        a {
+          opacity: 1;
+        }
+      }
     }
 }
 
@@ -266,20 +285,35 @@ h2.comments {
     background: $seconday-bg-color;
     margin: 0;
     padding: 15px;
+    .forum_ed_quote {
+      background: lighten($seconday-bg-color, 2%);
+      .forum_ed_spoiler {
+        margin: 0;
+      }
+    }
+    .forum_ed_spoiler {
+      margin: 0;
+    }
 }
 
-form {
-    .forum_editor {
-        .controls {
-            li {
-                margin-right: 4px;
-                input {
-                    border: none;
-                }
+
+.forum_editor {
+    .controls {
+      height: 29px;
+        li {
+            margin-right: 4px;
+            input {
+              background-image: none;
+              border: none;
+              display: none;
+            }
+            button {
+              background-image: none;
             }
         }
     }
 }
+
 
 .forum_thread_reply {
     h2 {
@@ -334,7 +368,8 @@ form {
     &:nth-of-type(1) {
         margin-top: 100px;
     }
-    &.unread {
+    &.unread,
+    &.official {
         padding-left: 15px;
     }
     .head {
@@ -494,4 +529,10 @@ form {
             }
         }
     }
+}
+
+.content.details {
+  ul {
+    list-style-type: disc;
+  }
 }

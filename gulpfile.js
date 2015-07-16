@@ -18,11 +18,12 @@ var zip = require('gulp-zip');
 
 var src = {}
     src.path = './src';
-    src.pathEvent = './src/event';
+    src.pathBackground = './src/background';
     src.pathTheme = './src/theme';
     src.pathOptions = './src/options';
+    src.pathPopup = './src/popup';
 
-    src.eventJavascripts = src.pathEvent + '/javascripts/*.js';
+    src.backgroundJavascripts = src.pathBackground + '/javascripts/*.js';
 
     src.manifest = src.path + '/manifest.json';
 
@@ -30,9 +31,11 @@ var src = {}
     src.optionsStylesheets = src.pathOptions + '/stylesheets/*';
     src.optionsViews = src.pathOptions + '/views/*';
 
+    src.popupViews = src.pathPopup + '/views/*';
+
     src.themeFonts = src.pathTheme + '/fonts/**/*';
     src.themeImages = src.pathTheme + '/images/**/*';
-    src.themeJavascripts = [src.pathTheme + '/javascripts/vendor/*.js', src.pathTheme + '/javascripts/*.js'];
+    src.themeJavascripts = [src.pathTheme + '/javascripts/jquery/*.js', src.pathTheme + '/javascripts/vendor/**/*.js', src.pathTheme + '/javascripts/*.js'];
     src.themeStylesheets = src.pathTheme + '/stylesheets/**/*';
     src.themeStylesheetsFonts = src.pathTheme + '/stylesheets/base/fonts.scss';
     src.themeStylesheetsMain = src.pathTheme + '/stylesheets/*.scss';
@@ -49,6 +52,11 @@ var dist = {}
 
 gulp.task('views:options', function () {
     return gulp.src(src.optionsViews)
+    .pipe(gulp.dest(dist.views))
+});
+
+gulp.task('views:popup', function () {
+    return gulp.src(src.popupViews)
     .pipe(gulp.dest(dist.views))
 });
 
@@ -93,10 +101,9 @@ gulp.task('javascripts:options', function() {
     .pipe(gulp.dest(dist.javascripts))
 });
 
-gulp.task('javascripts:event', function() {
-    return gulp.src(src.eventJavascripts)
+gulp.task('javascripts:background', function() {
+    return gulp.src(src.backgroundJavascripts)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(concat('event.js'))
     .pipe(gulp.dest(dist.javascripts))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
@@ -171,20 +178,23 @@ gulp.task('default', function (cb) {
     sequence(
         'clean',
         [
-        'views:options',
-        'stylesheets:main',
-        'stylesheets:fonts',
-        'javascripts',
-        'javascripts:options',
-        'javascripts:event',
-        'images',
-        'fonts',
-        'manifest'
+            'views:popup',
+            'views:options',
+            'stylesheets:main',
+            'stylesheets:fonts',
+            'javascripts',
+            'javascripts:options',
+            'javascripts:background',
+            'images',
+            'fonts',
+            'manifest'
         ],
         cb
     );
     gulp.watch(src.manifest, ['manifest']);
+    gulp.watch(src.backgroundJavascripts, ['javascripts:background']);
     gulp.watch(src.optionsJavascripts, ['javascripts:options']);
+    gulp.watch(src.popupViews, ['views:popup']);
     gulp.watch(src.optionsViews, ['views:options']);
     gulp.watch(src.themeFonts, ['fonts']);
     gulp.watch(src.themeImages, ['images']);
@@ -196,12 +206,13 @@ gulp.task('build', function(cb) {
     sequence(
         'clean',
         [
+            'views:popup',
             'views:options',
             'stylesheets:main',
             'stylesheets:fonts',
             'javascripts',
             'javascripts:options',
-            'javascripts:event',
+            'javascripts:background',
             'images',
             'fonts',
             'manifest:build'

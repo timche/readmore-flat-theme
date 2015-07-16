@@ -3,14 +3,19 @@
 @import "base/base";
 
 $primary-font-color: #fff;
-$seconday-font-color: #fff;
 $primary-bg-color: #13222b;
 $seconday-bg-color: lighten($primary-bg-color, 10%);
-
+$seconday-font-color: tint($seconday-bg-color, 40%);
 $nav-bg-color: $seconday-bg-color;
-
 $base-border: 1px solid $seconday-bg-color;
 
 @import "modules/modules";
 
 @import "layout/layout";
+
+
+#c_content {
+  span[style*="color:#000000"] {
+    color: #fff;
+  }
+}
