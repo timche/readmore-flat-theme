@@ -33,6 +33,7 @@
 
     "permissions": [
         "storage",
+        "declarativeContent",
         "http://www.readmore.de/"
     ],
 
