@@ -16,6 +16,11 @@
     &.col2 {
         width: 899px;
     }
+    h3 {
+      color: $primary-font-color;
+      text-align: left;
+      border: none;
+    }
 }
 
 #c_content ul.breadcrumbs {
@@ -154,6 +159,8 @@ a.load_more {
     font-size: 12px;
     color: $primary-font-color;
     .author {
+        margin-top: 4px;
+        width: 327px;
         img {
             border-radius: 50%;
             width: 64px;
@@ -510,4 +517,10 @@ form {
             }
         }
     }
+}
+
+.content.details {
+  ul {
+    list-style-type: disc;
+  }
 }
