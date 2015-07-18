@@ -42,9 +42,6 @@
                 "http://www.readmore.de/matches/*",
                 "http://www.readmore.de/betting/*"
             ],
-            "css": [
-                "assets/css/readmore-flat-theme-fonts.css"
-            ],
             "js": [
                 "assets/js/readmore-flat-theme.js"
             ],

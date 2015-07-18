@@ -59,7 +59,9 @@ gulp.task('stylesheets:main', function () {
     .pipe(rename({prefix: package.name + '-'}))
     .pipe(replace('@charset "UTF-8";', ''))
     .pipe(replace(';', ' !important;'))
+    .pipe(replace('.css") !important;', '.css");'))
     .pipe(gulp.dest(dist.stylesheets))
+    .pipe(replace('.css', '.min.css'))
     .pipe(csso())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.stylesheets))
@@ -70,6 +72,9 @@ gulp.task('stylesheets:fonts', function () {
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass.sync({includePaths: bourbon}))
     .pipe(rename({basename: package.name + '-fonts'}))
+    .pipe(gulp.dest(dist.stylesheets))
+    .pipe(csso())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.stylesheets))
 });
 
