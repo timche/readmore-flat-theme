@@ -248,13 +248,45 @@ h2.comments {
         padding-bottom: 15px;
         margin-top: 15px;
         .comment_buttons {
+            opacity: 0;
+            transition: $base-transition;
             a {
                 @extend .button;
-                &:last-of-type {
-                    margin-right: 4px;
-                    &:after {
-                        content: "";
-                        padding: 0;
+                margin-right: 4px;
+                text-indent: -100px;
+                position: relative;
+                padding-left: 18px;
+                padding-right: 18px;
+                overflow: hidden;
+                display: inline-block;
+                float: none;
+                &:after {
+                    content: "";
+                    padding: 0;
+                }
+                &:before {
+                    @include fa-icon();
+                    position: absolute;
+                    top: 0;
+                    left: 100px;
+                    margin-top: 10px;
+                }
+                &[onclick*="forums_post_quote"] {
+                    &:before {
+                        content: $fa-var-quote-left;
+                        margin-left: 14px;
+                    }
+                }
+                &[onclick*="report_post"] {
+                    &:before {
+                        content: $fa-var-exclamation;
+                        margin-left: 16px;
+                    }
+                }
+                &[onclick*="comment_edit"] {
+                    &:before {
+                        content: $fa-var-pencil;
+                        margin-left: 13px;
                     }
                 }
             }
@@ -268,29 +300,10 @@ h2.comments {
     &:hover,
     &:focus {
       .comment_buttons {
-        a {
-          opacity: 1;
-        }
+        opacity: 1;
       }
     }
 }
-
-.forum_ed_quote {
-    color: $primary-font-color;
-    background: $secondary-bg-color;
-    margin: 0;
-    padding: 15px;
-    .forum_ed_quote {
-      background: lighten($secondary-bg-color, 2%);
-      .forum_ed_spoiler {
-        margin: 0;
-      }
-    }
-    .forum_ed_spoiler {
-      margin: 0;
-    }
-}
-
 
 .forum_editor {
     .controls {
@@ -298,12 +311,9 @@ h2.comments {
         li {
             margin-right: 4px;
             input {
-              // background-image: none;
-              border: none;
-              // display: none;
-            }
-            button {
-              background-image: none;
+                font-family: $fontawesome;
+                border: none;
+                background-image: none;
             }
         }
     }

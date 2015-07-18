@@ -1,0 +1,30 @@
+.forum_ed_quote {
+    color: $primary-font-color;
+    background: $secondary-bg-color;
+    margin: 0;
+    padding: 15px;
+    .forum_ed_quote {
+      background: lighten($secondary-bg-color, 2%);
+      .forum_ed_quote {
+        background: lighten($secondary-bg-color, 4%);
+        .forum_ed_quote {
+          background: lighten($secondary-bg-color, 6%);
+          .forum_ed_quote {
+            background: lighten($secondary-bg-color, 8%);
+            .forum_ed_quote {
+              background: lighten($secondary-bg-color, 10%);
+              .forum_ed_quote {
+                background: lighten($secondary-bg-color, 12%);
+                .forum_ed_quote {
+                  background: lighten($secondary-bg-color, 14%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .forum_ed_spoiler {
+      margin: 0;
+    }
+}
