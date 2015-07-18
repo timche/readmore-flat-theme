@@ -64,6 +64,9 @@
         }
         &.mod {
             color: $blue;
+            &:before {
+                display: none;
+            }
         }
     }
 }
@@ -125,4 +128,9 @@
 #pricehits,
 #pricehits-down {
     display: none;
+}
+
+.up_snav {
+    font-size: 12px;
+    margin-top: 20px;
 }

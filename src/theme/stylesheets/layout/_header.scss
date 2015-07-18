@@ -20,7 +20,10 @@
         }
     }
     #logo {
+        width: 180px;
         margin-top: 15px;
+        background-image: url("#{$extension-url}/assets/img/logo-white.svg");
+        background-size: 100%;
     }
     .nav {
         margin-top: 24px;
@@ -138,7 +141,16 @@
         }
     }
     #module_search_container_header_search {
-        display: none;
+        background: $nav-bg-color;
+        color: $nav-font-color;
+        border: none;
+        box-shadow: none;
+        top: 61px;
+        height: auto;
+        padding: 15px;
+        .title {
+            font-weight: bold;
+        }
     }
 }
 

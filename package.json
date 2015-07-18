@@ -2,7 +2,7 @@
   "name": "readmore-flat-theme",
   "title": "Readmore Flat Theme",
   "description": "Ein Flat Theme für readmore.de",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "timche",
   "repository": {
     "type": "git",
@@ -14,8 +14,8 @@
     "gulp-autoprefixer": "^2.3.1",
     "gulp-bump": "^0.3.1",
     "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.0.0",
     "gulp-imagemin": "^2.3.0",
-    "gulp-minify-css": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",

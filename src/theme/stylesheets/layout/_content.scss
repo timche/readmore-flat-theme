@@ -2,16 +2,11 @@
     font-size: 14px;
     background: transparent;
     width: 700px;
-    >a {
-        &:last-of-type {
-            @extend .button;
-            &[name="post_comment"] {
-                display: none;
-            }
+    >a[href*="http://www.readmore.de/news/archive"] {
+        @extend .button;
+        &[name="post_comment"] {
+            display: none;
         }
-    }
-    >br {
-        display: none;
     }
     &.col2 {
         width: 900px;
@@ -93,12 +88,6 @@
     a {
         @extend .button;
         margin-left: 2px;
-        &:first-child {
-            &:before {
-                @extend %icon;
-                @extend %icon-users;
-            }
-        }
         &:nth-child(2) {
             @extend .is-blue;
         }
@@ -253,13 +242,45 @@ h2.comments {
         padding-bottom: 15px;
         margin-top: 15px;
         .comment_buttons {
+            opacity: 0;
+            transition: $base-transition;
             a {
                 @extend .button;
-                &:last-of-type {
-                    margin-right: 4px;
-                    &:after {
-                        content: "";
-                        padding: 0;
+                margin-right: 4px;
+                text-indent: -100px;
+                position: relative;
+                padding-left: 18px;
+                padding-right: 18px;
+                overflow: hidden;
+                display: inline-block;
+                float: none;
+                &:after {
+                    content: "";
+                    padding: 0;
+                }
+                &:before {
+                    @include fa-icon();
+                    position: absolute;
+                    top: 0;
+                    left: 100px;
+                    margin-top: 10px;
+                }
+                &[onclick*="forums_post_quote"] {
+                    &:before {
+                        content: $fa-var-quote-left;
+                        margin-left: 14px;
+                    }
+                }
+                &[onclick*="report_post"] {
+                    &:before {
+                        content: $fa-var-exclamation;
+                        margin-left: 16px;
+                    }
+                }
+                &[onclick*="comment_edit"] {
+                    &:before {
+                        content: $fa-var-pencil;
+                        margin-left: 13px;
                     }
                 }
             }
@@ -273,29 +294,10 @@ h2.comments {
     &:hover,
     &:focus {
       .comment_buttons {
-        a {
-          opacity: 1;
-        }
+        opacity: 1;
       }
     }
 }
-
-.forum_ed_quote {
-    color: $primary-font-color;
-    background: $secondary-bg-color;
-    margin: 0;
-    padding: 15px;
-    .forum_ed_quote {
-      background: lighten($secondary-bg-color, 2%);
-      .forum_ed_spoiler {
-        margin: 0;
-      }
-    }
-    .forum_ed_spoiler {
-      margin: 0;
-    }
-}
-
 
 .forum_editor {
     .controls {
@@ -303,12 +305,9 @@ h2.comments {
         li {
             margin-right: 4px;
             input {
-              // background-image: none;
-              border: none;
-              // display: none;
-            }
-            button {
-              background-image: none;
+                font-family: $fontawesome;
+                border: none;
+                background-image: none;
             }
         }
     }
@@ -536,4 +535,99 @@ h2.comments {
   ul {
     list-style-type: disc;
   }
+}
+
+ul.messages_nav li a {
+    @extend .button;
+}
+
+img[src*="user_pictures"],
+img[src*="default"] {
+    border-radius: 50%;
+}
+
+input[value="Neuen Avatar hochladen"] {
+    margin-left: 4px;
+}
+
+input[value="Avatar löschen"] {
+    background: $secondary-bg-color;
+    color: $primary-font-color;
+    &:hover,
+    &:focus {
+        background: $blue;
+        color: #fff;
+    }
+}
+
+div.msg {
+    background: none;
+    border: none;
+    padding: 15px;
+    &:not(:last-of-type) {
+        border-bottom: $base-border;
+    }
+}
+
+div.msg .head .left span {
+    font-size: 12px;
+}
+
+div.msg .head .right span {
+    font-size: 12px;
+}
+
+div.msg .body .buttons {
+    opacity: 0;
+    transition: $base-transition;
+}
+
+div.msg {
+    &:hover,
+    &:focus {
+        .buttons {
+            opacity: 1;
+        }
+    }
+}
+
+.user_status {
+    border-radius: 50%;
+}
+
+input[value="Alle Nachrichten ausklappen"] {
+    margin-left: 4px;
+}
+
+.profile_details {
+    font-size: 14px;
+}
+
+a[onclick*="report_post"] {
+    @extend .button;
+}
+
+.group_image {
+    border-radius: 50%;
+    border: none;
+}
+
+.group_details {
+    margin: 0;
+    font-size: 14px;
+    width: 100%;
+    padding-left: 132px;
+}
+
+#c_content object[type*="application/x-shockwave-flash"] {
+    width: 100%;
+    height: 414px;
+}
+
+#c_above {
+    margin-bottom: 30px;
+     object[type*="application/x-shockwave-flash"] {
+        width: 100%;
+        height: 707px;
+    }
 }

@@ -5,7 +5,7 @@ var bump = require('gulp-bump');
 var concat = require('gulp-concat');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
-var minifyCSS = require('gulp-minify-css');
+var csso = require('gulp-csso');
 var notify = require("gulp-notify");
 var package = require('./package.json');
 var plumber = require('gulp-plumber');
@@ -20,18 +20,14 @@ var src = {}
     src.path = './src';
     src.pathBackground = './src/background';
     src.pathTheme = './src/theme';
-    src.pathOptions = './src/options';
     src.pathPopup = './src/popup';
 
     src.backgroundJavascripts = src.pathBackground + '/javascripts/*.js';
 
     src.manifest = src.path + '/manifest.json';
 
-    src.optionsJavascripts = src.pathOptions + '/javascripts/*';
-    src.optionsStylesheets = src.pathOptions + '/stylesheets/*';
-    src.optionsViews = src.pathOptions + '/views/*';
-
     src.popupViews = src.pathPopup + '/views/*';
+    src.popupJavascripts = src.pathPopup + '/javascripts/*';
 
     src.themeFonts = src.pathTheme + '/fonts/**/*';
     src.themeImages = src.pathTheme + '/images/**/*';
@@ -50,11 +46,6 @@ var dist = {}
     dist.stylesheets = dist.pathAssets + '/css';
     dist.views = dist.pathAssets + '/views';
 
-gulp.task('views:options', function () {
-    return gulp.src(src.optionsViews)
-    .pipe(gulp.dest(dist.views))
-});
-
 gulp.task('views:popup', function () {
     return gulp.src(src.popupViews)
     .pipe(gulp.dest(dist.views))
@@ -66,9 +57,12 @@ gulp.task('stylesheets:main', function () {
     .pipe(sass.sync({includePaths: bourbon}))
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({prefix: package.name + '-'}))
+    .pipe(replace('@charset "UTF-8";', ''))
     .pipe(replace(';', ' !important;'))
+    .pipe(replace('.css") !important;', '.css");'))
     .pipe(gulp.dest(dist.stylesheets))
-    .pipe(minifyCSS())
+    .pipe(replace('.css', '.min.css'))
+    .pipe(csso())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.stylesheets))
 });
@@ -78,6 +72,9 @@ gulp.task('stylesheets:fonts', function () {
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass.sync({includePaths: bourbon}))
     .pipe(rename({basename: package.name + '-fonts'}))
+    .pipe(gulp.dest(dist.stylesheets))
+    .pipe(csso())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.stylesheets))
 });
 
@@ -89,12 +86,13 @@ gulp.task('javascripts', function() {
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.javascripts))
+    .pipe(notify("javascripts: Finished!"))
 });
 
-gulp.task('javascripts:options', function() {
-    return gulp.src(src.optionsJavascripts)
+gulp.task('javascripts:popup', function() {
+    return gulp.src(src.popupJavascripts)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(concat('options.js'))
+    .pipe(concat('popup.js'))
     .pipe(gulp.dest(dist.javascripts))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
@@ -141,9 +139,8 @@ gulp.task('manifest:build', function() {
     .pipe(gulp.dest(dist.path))
 });
 
-gulp.task('options:production', function() {
-    return gulp.src(dist.views + '/options.html')
-    .pipe(replace('.css', '.min.css'))
+gulp.task('popup:production', function() {
+    return gulp.src(dist.views + '/popup.html')
     .pipe(replace('.js', '.min.js'))
     .pipe(gulp.dest(dist.views))
 });
@@ -169,7 +166,7 @@ gulp.task('clean:build', function (cb) {
         dist.stylesheets + '/' + package.name + '-light.css',
         dist.stylesheets + '/' + package.name + '-dark.css',
         dist.javascripts + '/' + package.name + '.js',
-        dist.javascripts + '/' + 'options.js',
+        dist.javascripts + '/' + 'popup.js',
         dist.javascripts + '/' + 'event.js'
     ], cb);
 });
@@ -179,11 +176,10 @@ gulp.task('default', function (cb) {
         'clean',
         [
             'views:popup',
-            'views:options',
             'stylesheets:main',
             'stylesheets:fonts',
             'javascripts',
-            'javascripts:options',
+            'javascripts:popup',
             'javascripts:background',
             'images',
             'fonts',
@@ -193,9 +189,8 @@ gulp.task('default', function (cb) {
     );
     gulp.watch(src.manifest, ['manifest']);
     gulp.watch(src.backgroundJavascripts, ['javascripts:background']);
-    gulp.watch(src.optionsJavascripts, ['javascripts:options']);
+    gulp.watch(src.popupJavascripts, ['javascripts:popup']);
     gulp.watch(src.popupViews, ['views:popup']);
-    gulp.watch(src.optionsViews, ['views:options']);
     gulp.watch(src.themeFonts, ['fonts']);
     gulp.watch(src.themeImages, ['images']);
     gulp.watch(src.themeJavascripts, ['javascripts']);
@@ -207,17 +202,16 @@ gulp.task('build', function(cb) {
         'clean',
         [
             'views:popup',
-            'views:options',
             'stylesheets:main',
             'stylesheets:fonts',
             'javascripts',
-            'javascripts:options',
+            'javascripts:popup',
             'javascripts:background',
             'images',
             'fonts',
             'manifest:build'
         ],
-        'options:production',
+        'popup:production',
         'clean:build',
         'zip',
         cb
