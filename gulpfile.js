@@ -5,7 +5,7 @@ var bump = require('gulp-bump');
 var concat = require('gulp-concat');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
-var minifyCSS = require('gulp-minify-css');
+var csso = require('gulp-csso');
 var notify = require("gulp-notify");
 var package = require('./package.json');
 var plumber = require('gulp-plumber');
@@ -57,9 +57,10 @@ gulp.task('stylesheets:main', function () {
     .pipe(sass.sync({includePaths: bourbon}))
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({prefix: package.name + '-'}))
+    .pipe(replace('@charset "UTF-8";', ''))
     .pipe(replace(';', ' !important;'))
     .pipe(gulp.dest(dist.stylesheets))
-    .pipe(minifyCSS())
+    .pipe(csso())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.stylesheets))
 });
