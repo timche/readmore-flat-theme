@@ -86,6 +86,7 @@ gulp.task('javascripts', function() {
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist.javascripts))
+    .pipe(notify("javascripts: Finished!"))
 });
 
 gulp.task('javascripts:popup', function() {
