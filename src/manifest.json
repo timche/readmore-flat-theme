@@ -40,7 +40,8 @@
                 "http://www.readmore.de/news/*",
                 "http://www.readmore.de/forums/*",
                 "http://www.readmore.de/matches/*",
-                "http://www.readmore.de/betting/*"
+                "http://www.readmore.de/betting/*",
+                "http://www.readmore.de/search*"
             ],
             "js": [
                 "assets/js/readmore-flat-theme.js"

@@ -2,16 +2,11 @@
     font-size: 14px;
     background: transparent;
     width: 700px;
-    >a {
-        &:last-of-type {
-            @extend .button;
-            &[name="post_comment"] {
-                display: none;
-            }
+    >a[href*="http://www.readmore.de/news/archive"] {
+        @extend .button;
+        &[name="post_comment"] {
+            display: none;
         }
-    }
-    >br {
-        display: none;
     }
     &.col2 {
         width: 900px;
