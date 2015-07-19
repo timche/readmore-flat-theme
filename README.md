@@ -5,6 +5,8 @@
 
 Das Readmore Flat Theme lässt das Aussehen der deutschen eSport-Webseite [readmore.de](http://www.readmore.de) in neuem Glanz erstrahlen.
 
+Das Readmore Flat Theme verpasst der deutschen eSport-Webseite [readmore.de](http://www.readmore.de) einen neuen modernen Look.
+
 Ein Open-Source Projekt von der Community, für die Community.
 
 [Readmore Flat Theme Forum Thread](http://www.readmore.de/forums/91-technik/60-software/139913-readmore-flat-theme-v0-0-3-chrome-only)
