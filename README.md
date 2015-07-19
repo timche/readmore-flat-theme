@@ -3,8 +3,6 @@
 
 [![devDependencies](https://david-dm.org/timche/readmore-flat-theme/dev-status.svg)](https://david-dm.org/timche/readmore-flat-theme#info=devDependencies)
 
-Das Readmore Flat Theme lässt das Aussehen der deutschen eSport-Webseite [readmore.de](http://www.readmore.de) in neuem Glanz erstrahlen.
-
 Das Readmore Flat Theme verpasst der deutschen eSport-Webseite [readmore.de](http://www.readmore.de) einen neuen modernen Look.
 
 Ein Open-Source Projekt von der Community, für die Community.
