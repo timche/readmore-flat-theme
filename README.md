@@ -1,6 +1,7 @@
 # Readmore Flat Theme
 ![Readmore Flat Theme](http://i.imgur.com/QFimj0c.png)
 
+[![Build Status](https://travis-ci.org/timche/readmore-flat-theme.svg?branch=master)](https://travis-ci.org/timche/readmore-flat-theme)
 [![devDependencies](https://david-dm.org/timche/readmore-flat-theme/dev-status.svg)](https://david-dm.org/timche/readmore-flat-theme#info=devDependencies)
 
 Das Readmore Flat Theme verpasst der deutschen eSport-Webseite [readmore.de](http://www.readmore.de) einen neuen modernen Look.
