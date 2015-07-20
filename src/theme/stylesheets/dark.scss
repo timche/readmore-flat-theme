@@ -9,6 +9,8 @@ $secondary-font-color: tint($secondary-bg-color, 40%);
 $nav-bg-color: $secondary-bg-color;
 $base-border: 1px solid $secondary-bg-color;
 
+$match-pistol-image: 'http://i.imgur.com/yfWEb5v.png';
+
 @import "modules/modules";
 
 @import "layout/layout";

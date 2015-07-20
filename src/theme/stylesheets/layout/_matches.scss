@@ -126,6 +126,24 @@ ul.match_subs li span.score {
     }
 }
 
+ul.match_subs li span.score span.pist {
+    img {
+        width: 0;
+        height: 0;
+        padding: 4px 6px;
+        margin-top: 6px;
+    }
+
+    &:first-child img {
+        background-image: url($match-pistol-image);
+    }
+
+    &:last-child img {
+        background-image: url($match-pistol-image);
+        transform: scaleX(-1);
+    }
+}
+
 ul.match_subs li span.opp.opp2 {
     text-align: left;
     img {
