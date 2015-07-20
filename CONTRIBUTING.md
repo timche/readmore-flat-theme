@@ -40,7 +40,8 @@ Diese Repository verwendet Gulp.js für einen automatisierten Entwicklungsprozes
 
 ## Contributing
 
-1. Neuen Branch baseriend vom `master` Branch erstellen und sinnvoll benennen (Ein Branch pro Fix/Feature)
-2. Änderungen machen
-3. Änderungen comitten mit detailierter Beschreibung was geändert wurde
-4. Pull Request machen mit dem `master` Branch als Base (Vorher überprüfen ob der neue Branch mit dem `master` Branch aktuell ist)
+1. Neuen Branch baseriend vom `master` Branch erstellen und sinnvoll benennen (Ein Branch pro Fix/Feature).
+2. Änderungen machen.
+3. Änderungen comitten mit detailierter Beschreibung was geändert wurde.
+4. Pull Request machen mit dem `master` Branch als Base (Vorher überprüfen ob der neue Branch mit dem `master` Branch aktuell ist).
+5. Wenn Travis CI grünes Licht gibt, landet der Pull Request evtl. in der Main Repository.
