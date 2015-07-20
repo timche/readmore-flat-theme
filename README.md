@@ -23,7 +23,7 @@ Folgende Einstellungen sollten deaktiviert sein, um Fehler zu vermeiden:
 * Breites Design
 
 ## Screenshots
-Siehe [Chrome Web Store](https://chrome.google.com/webstore/detail/readmore-flat-theme/ocmchkcmbgeceokandifjnbadnajeljk)
+Siehe [Chrome Web Store](https://chrome.google.com/webstore/detail/readmore-flat-theme/ocmchkcmbgeceokandifjnbadnajeljk).
 
 ## Contributing
 Wer gerne helfen möchte oder einfach ein wenig rumexperimentieren will, für den gibt es eine [Contributing Seite](https://github.com/timche/readmore-flat-theme/blob/master/CONTRIBUTING.md).
