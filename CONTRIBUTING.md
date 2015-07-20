@@ -29,14 +29,14 @@ Diese Repository verwendet Gulp.js für einen automatisierten Entwicklungsprozes
 
 ### `gulp build`
 
-`gulp build` generiert einen Build der Production Ready ist. Dabei werden die Dateien minifiziert und anschließend vom `dist`Ordner eine ZIP-Datei erstellt.
+`gulp build` generiert einen Build der Production Ready ist. Dabei werden die Dateien minifiziert und anschließend vom `dist` Ordner eine ZIP-Datei erstellt.
 
 ## Extension testen
 
 ### Google Chrome
 1. "Erweiterungen" öffnen 
 2. Entwicklermodus aktivieren
-3. `dist`Ordner in das "Erweiterungen"-Fenster schieben
+3. `dist` Ordner in das "Erweiterungen"-Fenster schieben
 
 ## Contributing
 
