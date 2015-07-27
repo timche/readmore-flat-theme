@@ -34,7 +34,7 @@ var src = {}
     src.themeJavascripts = [src.pathTheme + '/javascripts/jquery/*.js', src.pathTheme + '/javascripts/vendor/**/*.js', src.pathTheme + '/javascripts/*.js'];
     src.themeStylesheets = src.pathTheme + '/stylesheets/**/*';
     src.themeStylesheetsFonts = src.pathTheme + '/stylesheets/base/fonts.scss';
-    src.themeStylesheetsMain = src.pathTheme + '/stylesheets/*.scss';
+    src.themeStylesheetsMain = [src.pathTheme + '/stylesheets/*.scss', src.pathTheme + '/stylesheets/options/*.scss'];
 
 var dist = {}
     dist.path = './dist';
@@ -165,6 +165,7 @@ gulp.task('clean:build', function (cb) {
     del([
         dist.stylesheets + '/' + package.name + '-light.css',
         dist.stylesheets + '/' + package.name + '-dark.css',
+        dist.stylesheets + '/' + package.name + '-forum-arrows-visible.css',
         dist.javascripts + '/' + package.name + '.js',
         dist.javascripts + '/' + 'popup.js',
         dist.javascripts + '/' + 'event.js'

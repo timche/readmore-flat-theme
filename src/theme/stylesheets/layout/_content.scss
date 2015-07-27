@@ -407,6 +407,7 @@ h2.comments {
         color: inherit;
         font-size: 14px;
         line-height: 1.5;
+        word-break: break-all;
         hr {
             display: block;
             background: $secondary-bg-color;
@@ -630,4 +631,26 @@ a[onclick*="report_post"] {
         width: 100%;
         height: 707px;
     }
+}
+
+.profile_avatar {
+  img {
+    border: none;
+  }
+}
+
+.headline_content {
+  iframe {
+    width: 100%;
+    height: 414px;
+  }
+}
+
+table.group {
+  background: none;
+  tr {
+    th {
+      background: none;
+    }
+  }
 }
