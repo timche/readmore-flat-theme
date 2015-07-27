@@ -2,15 +2,25 @@
 <html>
 <head>
     <title>Readmore Flat Theme</title>
+    <style>
+      body {
+        width: 200px;
+      }
+    </style>
 </head>
 
 <body>
     <div>
-        Theme Style:
-        <select id="themeStyle">
+        <label for="themeStyle">Theme Style:</label>
+        <select id="themeStyle" name="themeStyle">
             <option value="light">Light</option>
             <option value="dark">Dark</option>
         </select>
+    </div>
+
+    <div>
+      <label for="forumArrowsVisible">Foren Pfeile dauerhaft sichtbar:</label>
+      <input type="checkbox" id="forumArrowsVisible" name="forumArrowsVisible">
     </div>
 
     <div>

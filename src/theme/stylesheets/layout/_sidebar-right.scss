@@ -328,22 +328,25 @@ h3 {
 }
 
 #forums_list {
-    ul {
-      li {
-        .r {
-          color: $seconday-font-color;
-          margin-right: 0;
-          opacity: 0;
-          margin-left: 5px;
+  ul {
+    li {
+      .r {
+        color: $seconday-font-color;
+        margin-right: 0;
+        opacity: 0;
+        margin-left: 5px;
+      }
+      &:hover,
+      &:focus {
+        a {
+          color: $blue;
         }
-        &:hover,
-        &:focus {
-          .r {
-            opacity: 1;
-          }
+        .r {
+          opacity: 1;
         }
       }
     }
+  }
 }
 
 #c_right #blogs_list h3 {

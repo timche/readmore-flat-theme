@@ -36,6 +36,7 @@
         border: none;
         background: none;
         font-style: normal;
+        width: 150px;
     }
     .line {
         position: static;
@@ -105,7 +106,7 @@
                 content: $fa-var-angle-down;
             }
             ul {
-                width: auto;
+                width: 143px;
                 top: 61px;
                 background: $nav-bg-color;
                 transition: $base-transition;

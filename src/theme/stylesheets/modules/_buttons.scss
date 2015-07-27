@@ -23,7 +23,8 @@
     }
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[value="Antwort erstellen"] {
     background-color: $blue;
     color: #fff;
     float: right;
@@ -32,4 +33,11 @@ input[type="submit"] {
         background-color: $orange;
         color: #fff;
     }
+}
+
+.profile_details {
+  color: inherit;
+  span {
+    color: inherit;
+  }
 }
