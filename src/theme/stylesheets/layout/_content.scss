@@ -407,7 +407,7 @@ h2.comments {
         color: inherit;
         font-size: 14px;
         line-height: 1.5;
-        word-break: break-all;
+        word-wrap: break-word;
         hr {
             display: block;
             background: $secondary-bg-color;
