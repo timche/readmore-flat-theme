@@ -36,3 +36,7 @@ table {
         }
     }
 }
+
+table.forum_threads tr td:nth-child(3) {
+  width: 100px;
+}

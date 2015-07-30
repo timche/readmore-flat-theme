@@ -2,6 +2,7 @@
     font-size: 14px;
     background: transparent;
     width: 700px;
+    padding-top: 0;
     >a[href*="http://www.readmore.de/news/archive"] {
         @extend .button;
         &[name="post_comment"] {
@@ -23,8 +24,7 @@
     font-size: 14px;
     border-bottom: $base-border;
     margin-bottom: 12px;
-	padding-bottom: 7px;
-    margin-top: -14px;
+	  padding-bottom: 6px;
     color: $seconday-font-color;
 }
 
@@ -364,9 +364,6 @@ h2.comments {
     margin: 0;
     padding: 0;
     margin-bottom: 15px;
-    &:nth-of-type(1) {
-        margin-top: 100px;
-    }
     &.unread,
     &.official {
         padding-left: 15px;
@@ -457,21 +454,39 @@ h2.comments {
                 left: 100px;
                 margin-top: 10px;
             }
-            &:nth-last-child(3) {
+            &[onclick*="forums_post_edit"] {
                 &:before {
                     content: $fa-var-pencil;
                     margin-left: 14px;
                 }
             }
-            &:nth-last-child(2) {
+            &[onclick*="report_post"] {
                 &:before {
                     content: $fa-var-exclamation;
                     margin-left: 16px;
                 }
             }
-            &:last-child {
+            &[onclick*="forums_post_quote"] {
                 &:before {
                     content: $fa-var-quote-left;
+                    margin-left: 13px;
+                }
+            }
+            &[href*="switch_sticky"] {
+                &:before {
+                    content: $fa-var-thumb-tack;
+                    margin-left: 13px;
+                }
+            }
+            &[href*="switch_close"] {
+                &:before {
+                    content: $fa-var-lock;
+                    margin-left: 13px;
+                }
+            }
+            &[href*="delete"] {
+                &:before {
+                    content: $fa-var-trash;
                     margin-left: 13px;
                 }
             }
@@ -626,6 +641,7 @@ a[onclick*="report_post"] {
 }
 
 #c_above {
+    display: none;
     margin-bottom: 30px;
      object[type*="application/x-shockwave-flash"] {
         width: 100%;
@@ -653,4 +669,42 @@ table.group {
       background: none;
     }
   }
+}
+
+.grid .round .match_container .match {
+  background: none;
+  color: $primary-font-color;
+  transition: $base-transition;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.grid .round .round_line {
+  background: $secondary-bg-color;
+}
+
+.ge_sidebox h2 {
+  text-align: left;
+  border: none;
+  padding-left: 16px;
+}
+
+.ge_sidebox {
+  border: none;
+  background: $secondary-bg-color;
+}
+
+.ge_sidebox>div {
+  color: $primary-font-color;
+}
+
+ul.match_subs li span.score span.pist {
+  margin-top: 2px;
+}
+
+#sb-container {
+  display: none;
+  visibility: hidden;
 }
