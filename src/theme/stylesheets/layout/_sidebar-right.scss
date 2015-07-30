@@ -3,7 +3,7 @@
     border: none;
     width: 300px;
     padding: 0 15px;
-    margin-top: -26px;
+    position: relative;
     &:hover {
         .control {
             opacity: 1;
@@ -17,7 +17,7 @@
         transition: $base-transition;
     }
     .control {
-        margin-top: 28px;
+        width: auto;
         opacity: 0;
     }
     .fa {
@@ -28,8 +28,12 @@
       color: $blue;
     }
     .control_betting {
-        width: 94px;
-        margin-top: 22px;
+        margin: 0;
+        width: auto;
+        float: none;
+        position: absolute;
+        left: 140px;
+        top: -2px;
         div {
             display: none;
         }
@@ -40,8 +44,6 @@
             width: 20px;
             padding: 0;
             padding-top: 5px;
-            top: 3px;
-            left: 0;
             text-align: center;
             transition: $base-transition;
             background: $secondary-bg-color;
@@ -171,25 +173,26 @@ font.score_loss {
         margin-right: 4px;
     }
     &:nth-of-type(1) {
-        &:before {
-            content: $fa-var-bars;
-        }
+        margin-top: 0;
+        // &:before {
+        //     content: $fa-var-bars;
+        // }
     }
-    &:nth-of-type(2) {
-        &:before {
-            content: $fa-var-trophy;
-        }
-    }
-    &:nth-of-type(3) {
-        &:before {
-            content: $fa-var-globe;
-        }
-    }
-    &:nth-of-type(4) {
-        &:before {
-            content: $fa-var-comments;
-        }
-    }
+    // &:nth-of-type(2) {
+    //     &:before {
+    //         content: $fa-var-trophy;
+    //     }
+    // }
+    // &:nth-of-type(3) {
+    //     &:before {
+    //         content: $fa-var-globe;
+    //     }
+    // }
+    // &:nth-of-type(4) {
+    //     &:before {
+    //         content: $fa-var-comments;
+    //     }
+    // }
     span[style*="float: right"] {
         display: inline-block;
         margin-top: 4px;
