@@ -375,3 +375,9 @@ h3 {
     font-size: 12px;
     color: $seconday-font-color;
 }
+
+#c_right {
+    a[onclick*="sidebar_forums_control"] {
+        margin-top: 25px;
+    }
+}
