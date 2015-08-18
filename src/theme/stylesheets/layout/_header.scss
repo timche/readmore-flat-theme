@@ -28,14 +28,26 @@
         }
     }
     #logo {
-        width: 180px;
-        height: 29px;
-        margin-top: 15px;
+        width: 130px;
+        height: 21px;
+        margin-top: 19px;
+        @media (min-width: 1200px) {
+            width: 180px;
+            height: 29px;
+            margin-top: 15px;
+        }
         background-image: url("#{$extension-url}/assets/img/logo-white.svg");
         background-size: 100%;
+        transition: $base-transition;
     }
     .nav {
         margin-top: 24px;
+        li {
+            padding: 0 4px;
+            @media (min-width: 1200px) {
+                padding: 0 10px;
+            }
+        }
     }
     #header_search {
         position: absolute;
@@ -51,7 +63,10 @@
         transition: $base-transition;
         background: $nav-bg-color;
         &.focus {
-            width: 529px;
+            width: 413px;
+            @media (min-width: 1200px) {
+                width: 529px;
+            }
         }
     }
     .line {
@@ -63,7 +78,10 @@
             padding: 0;
             margin: 0;
             vertical-align: middle;
-            margin-left: 15px;
+            margin-left: 6px;
+            @media (min-width: 1200px) {
+                margin-left: 15px;
+            }
             &.standing.standing_0 {
                 background: $green;
             }
