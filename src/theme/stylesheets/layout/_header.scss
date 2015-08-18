@@ -30,6 +30,8 @@
         margin-top: 24px;
     }
     #header_search {
+        position: absolute;
+        z-index: 100;
         float: none;
         margin-top: 19px;
         font-size: 12px;
@@ -37,7 +39,12 @@
         border: none;
         background: none;
         font-style: normal;
-        width: 112px;
+        width: 54px;
+        transition: $base-transition;
+        background: $nav-bg-color;
+        &.focus {
+            width: 529px;
+        }
     }
     .line {
         position: static;
