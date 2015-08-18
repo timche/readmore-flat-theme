@@ -352,11 +352,11 @@ h3 {
   }
 }
 
-#c_right #blogs_list h3 {
-    &:before {
-        content: $fa-var-book;
-    }
-}
+// #c_right #blogs_list h3 {
+//     &:before {
+//         content: $fa-var-book;
+//     }
+// }
 
 #c_right ul.matches li span.user_bet {
     color: $orange;
