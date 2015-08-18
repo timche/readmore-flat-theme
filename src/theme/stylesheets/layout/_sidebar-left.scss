@@ -1,8 +1,11 @@
 #c_left {
     background: transparent;
     border: none;
-    width: 200px;
     padding: 0 15px;
+    width: 20%;
+    @media (min-width: 1200px) {
+        width: 15%;
+    }
     .control {
         width: auto;
         opacity: 0;

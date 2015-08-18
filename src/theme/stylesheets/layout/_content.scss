@@ -1,8 +1,11 @@
 #c_content {
     font-size: 14px;
     background: transparent;
-    width: 700px;
-    padding-top: 0;
+    padding: 0 15px;
+    width: 50%;
+    @media (min-width: 1200px) {
+        width: 60%;
+    }
     >a[href*="http://www.readmore.de/news/archive"] {
         @extend .button;
         &[name="post_comment"] {
@@ -10,7 +13,12 @@
         }
     }
     &.col2 {
-        width: 900px;
+        @media (min-width: 992px) {
+            width: 70%;
+        }
+        @media (min-width: 1200px) {
+            width: 75%;
+        }
     }
     h3 {
       color: $blue;

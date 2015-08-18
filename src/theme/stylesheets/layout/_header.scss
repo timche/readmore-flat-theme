@@ -4,12 +4,20 @@
     z-index: 100;
     background: $nav-bg-color;
     height: 61px;
-    div {
+    >div {
         background: none;
         height: inherit;
-        div {
+        padding: 0 15px;
+        margin: 0 auto;
+        width: 960px;
+        @media (min-width: 1200px) {
             width: 1180px;
+        }
+        >div {
+            width: auto;
             font-size: 12px;
+            margin: 0;
+            height: 100%;
         }
     }
     a {

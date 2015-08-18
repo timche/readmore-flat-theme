@@ -5,7 +5,11 @@
     div {
         color: $nav-font-color;
         font-size: 12px;
-        width: 1180px;
+        padding: 0 15px;
+        width: 960px;
+        @media (min-width: 1200px) {
+            width: 1180px;
+        }
         a {
             color: $nav-font-color;
             &:hover,
