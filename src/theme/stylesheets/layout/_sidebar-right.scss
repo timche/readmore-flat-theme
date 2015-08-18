@@ -1,9 +1,12 @@
 #c_right {
     background: transparent;
     border: none;
-    width: 300px;
     padding: 0 15px;
     position: relative;
+    width: 30%;
+    @media (min-width: 1200px) {
+        width: 25%;
+    }
     &:hover {
         .control {
             opacity: 1;
@@ -54,9 +57,6 @@
                 color: #fff;
             }
         }
-    }
-    br {
-        display: none;
     }
     .matches {
         li {
@@ -352,11 +352,11 @@ h3 {
   }
 }
 
-#c_right #blogs_list h3 {
-    &:before {
-        content: $fa-var-book;
-    }
-}
+// #c_right #blogs_list h3 {
+//     &:before {
+//         content: $fa-var-book;
+//     }
+// }
 
 #c_right ul.matches li span.user_bet {
     color: $orange;
@@ -377,4 +377,17 @@ h3 {
     font-style: normal;
     font-size: 12px;
     color: $seconday-font-color;
+}
+
+#c_right {
+    >a[onclick*="sidebar_forums_control"] {
+        margin-top: 25px;
+    }
+    >a[href*="users"][href$="betting"],
+    >a[href*="users"][href$="comments"],
+    >a[href*="users"][href$="forum"],
+    >a[href*="users"][href$="blogs"],
+    >a[href*="users"][href$="headlines"] {
+        @extend button;
+    }
 }

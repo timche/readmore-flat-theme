@@ -4,12 +4,20 @@
     z-index: 100;
     background: $nav-bg-color;
     height: 61px;
-    div {
+    >div {
         background: none;
         height: inherit;
-        div {
+        padding: 0 15px;
+        margin: 0 auto;
+        width: 960px;
+        @media (min-width: 1200px) {
             width: 1180px;
+        }
+        >div {
+            width: auto;
             font-size: 12px;
+            margin: 0;
+            height: 100%;
         }
     }
     a {
@@ -20,15 +28,30 @@
         }
     }
     #logo {
-        width: 180px;
-        margin-top: 15px;
+        width: 130px;
+        height: 21px;
+        margin-top: 19px;
+        @media (min-width: 1200px) {
+            width: 180px;
+            height: 29px;
+            margin-top: 15px;
+        }
         background-image: url("#{$extension-url}/assets/img/logo-white.svg");
         background-size: 100%;
+        transition: $base-transition;
     }
     .nav {
         margin-top: 24px;
+        li {
+            padding: 0 4px;
+            @media (min-width: 1200px) {
+                padding: 0 10px;
+            }
+        }
     }
     #header_search {
+        position: absolute;
+        z-index: 100;
         float: none;
         margin-top: 19px;
         font-size: 12px;
@@ -36,7 +59,15 @@
         border: none;
         background: none;
         font-style: normal;
-        width: 112px;
+        width: 54px;
+        transition: $base-transition;
+        background: $nav-bg-color;
+        &.focus {
+            width: 413px;
+            @media (min-width: 1200px) {
+                width: 529px;
+            }
+        }
     }
     .line {
         position: static;
@@ -47,7 +78,10 @@
             padding: 0;
             margin: 0;
             vertical-align: middle;
-            margin-left: 15px;
+            margin-left: 6px;
+            @media (min-width: 1200px) {
+                margin-left: 15px;
+            }
             &.standing.standing_0 {
                 background: $green;
             }

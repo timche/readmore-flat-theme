@@ -1,8 +1,11 @@
 #c_left {
     background: transparent;
     border: none;
-    width: 200px;
     padding: 0 15px;
+    width: 20%;
+    @media (min-width: 1200px) {
+        width: 15%;
+    }
     .control {
         width: auto;
         opacity: 0;
@@ -44,9 +47,9 @@
             //     content: $fa-var-video-camera;
             // }
         }
-        &:nth-of-type(2) {
-            display: none;
-        }
+        // &:nth-of-type(2) {
+        //     display: none;
+        // }
         // &:nth-of-type(3) {
         //     &:before {
         //         content: $fa-var-gamepad;
@@ -132,5 +135,6 @@
 
 .up_snav {
     font-size: 12px;
-    margin-top: 20px;
+    padding: 0;
+    margin-bottom: 20px;
 }
