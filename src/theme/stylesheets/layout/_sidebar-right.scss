@@ -380,7 +380,14 @@ h3 {
 }
 
 #c_right {
-    a[onclick*="sidebar_forums_control"] {
+    >a[onclick*="sidebar_forums_control"] {
         margin-top: 25px;
+    }
+    >a[href*="users"][href$="betting"],
+    >a[href*="users"][href$="comments"],
+    >a[href*="users"][href$="forum"],
+    >a[href*="users"][href$="blogs"],
+    >a[href*="users"][href$="headlines"] {
+        @extend button;
     }
 }
