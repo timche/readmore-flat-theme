@@ -649,11 +649,13 @@ a[onclick*="report_post"] {
 }
 
 #c_above {
-    display: none;
-    margin-bottom: 30px;
-     object[type*="application/x-shockwave-flash"] {
-        width: 100%;
-        height: 707px;
+    #livestream_player {
+        margin-bottom: 30px;
+        padding: 0 15px;
+        object[type*="application/x-shockwave-flash"] {
+            width: 100%;
+            height: 707px;
+        }
     }
 }
 
