@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/timche/readmore-flat-theme.svg?branch=master)](https://travis-ci.org/timche/readmore-flat-theme)
 [![devDependencies](https://david-dm.org/timche/readmore-flat-theme/dev-status.svg)](https://david-dm.org/timche/readmore-flat-theme#info=devDependencies)
 
-> The Readmore Flat Theme applies a modern look for the german eSports website readmore.de
+> A Flat Theme for the german eSports website readmore.de
 
 An open-source project from the community, for the community.
 

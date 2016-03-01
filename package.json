@@ -1,8 +1,8 @@
 {
   "name": "readmore-flat-theme",
   "title": "Readmore Flat Theme",
-  "description": "Ein Flat Theme für readmore.de",
-  "version": "1.3.0",
+  "description": "A Flat Theme for the german eSports website readmore.de",
+  "version": "1.4.0",
   "author": "timche",
   "repository": {
     "type": "git",

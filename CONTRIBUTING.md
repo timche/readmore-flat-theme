@@ -1,47 +1,45 @@
 # Contributing
 
-## Dependencies
+## Requirements
 
-Folgende Dependencies sollten auf der Maschine installiert sein:
+The following dependencies should be installed on your machine:
 * Git
-* Node.js
+* Node
 * npm
-* gulp.js
-
-Bei einer Installation von Node.js über die Binary wird npm bereits mitgeliefert. npm wird benutzt, um die benötigten npm Packages zu installieren.
-* gulp.js `npm install gulp -g`
+* gulp.js – `npm install gulp -g`
 
 ## Installation
 
-1. Repository forken
-2. Geforkte Repository klonen
-3. Alle benötigten Dependencies in der lokalen Repository via `npm install` installieren
+1. Fork this repository.
+1. Clone your forked repository.
+1. Install all dependencies with `npm install`.
 
 ## Building
 
-Diese Repository verwendet Gulp.js für einen automatisierten Entwicklungsprozess.
+This project uses gulp.js for the build process.
 
-### Gulp Tasks
+### gulp.js Tasks
 
 #### `gulp`
 
-`gulp` ist unsere Haupttask und wird für unsere Entwicklung verwendet. Er erstellt einen `dist` Ordner und kompiliert alle Dateien aus dem `src` Ordner. Zudem überwacht er während der Entwicklung alle relevanten Dateien auf Änderungen und führt die passende Task automatisch aus, um die geänderten Dateien in `dist` zu aktualisieren.
+`gulp` is our main task and will be used during the development. It compiles all files from `src/` into a `dist/` folder and watches our files on changes and re-compiles them automatically.
 
 ### `gulp build`
 
-`gulp build` generiert einen Build der Production Ready ist. Dabei werden die Dateien minifiziert und anschließend vom `dist` Ordner eine ZIP-Datei erstellt.
+`gulp build` generates a production-ready build. All files are going to be minified and a .zip file will be created of the `dist/` folder that can be used to be submitted in the Chrome Web Store.
 
-## Extension testen
+## Extension Testing
 
 ### Google Chrome
-1. "Erweiterungen" öffnen 
-2. Entwicklermodus aktivieren
-3. `dist` Ordner in das "Erweiterungen"-Fenster schieben
+1. Open `Extensions`.
+2. Activate `Developer mode`.
+3. Move the `dist` folder into Chrome with the `Extensions` window opened.
 
 ## Contributing
 
-1. Neuen Branch baseriend vom `master` Branch erstellen und sinnvoll benennen (Ein Branch pro Fix/Feature).
-2. Änderungen machen.
-3. Änderungen comitten mit detailierter Beschreibung was geändert wurde.
-4. Pull Request machen mit dem `master` Branch als Base (Vorher überprüfen ob der neue Branch mit dem `master` Branch aktuell ist).
-5. Wenn Travis CI grünes Licht gibt, landet der Pull Request evtl. in der Main Repository.
+1. Create a new branch based on `master`.
+1. Do your changes.
+1. Commit your changes.
+1. Create a pull request.
+1. Wait for Travis CI.
+1. If everything went fine, your changes are maybe released in the next version.
