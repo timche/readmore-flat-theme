@@ -29,13 +29,13 @@
     "permissions": [
         "storage",
         "declarativeContent",
-        "http://www.readmore.de/"
+        "https://www.readmore.de/"
     ],
 
     "content_scripts": [
         {
             "matches": [
-                "http://www.readmore.de/*"
+                "https://www.readmore.de/*"
             ],
             "js": [
                 "assets/js/readmore-flat-theme.js"
