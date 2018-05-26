@@ -8,9 +8,7 @@ function save_options() {
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
-    status.textContent = 'Optionen gespeichert.';
-    // Reload the page after saving the options.
-    chrome.tabs.reload();
+    status.textContent = 'Optionen gespeichert. Seite muss neu geladen werden.';
   });
 }
 document.getElementById('save').addEventListener('click', save_options);
