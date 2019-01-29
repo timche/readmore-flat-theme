@@ -1,4 +1,9 @@
+# Deprecated
+
+Readmore has released a new website and makes this theme obsolete.
+
 # Readmore Flat Theme
+
 ![Readmore Flat Theme](http://i.imgur.com/QFimj0c.png)
 
 [![Build Status](https://travis-ci.org/timche/readmore-flat-theme.svg?branch=master)](https://travis-ci.org/timche/readmore-flat-theme)
